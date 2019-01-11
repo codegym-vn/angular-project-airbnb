@@ -4,12 +4,14 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppComponent} from './app.component';
 import {CustomerComponent} from './customer/customer.component';
 import { ViewDetailComponent } from './view-detail/view-detail.component';
+import { BookingHomeComponent } from './booking-home/booking-home.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         CustomerComponent,
-        ViewDetailComponent
+        ViewDetailComponent,
+        BookingHomeComponent
     ],
     imports: [
         BrowserModule,
