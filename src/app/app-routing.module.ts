@@ -5,7 +5,7 @@ import {ViewDetailComponent} from './view-detail/view-detail.component';
 
 const routes: Routes = [
     {path: 'house', component: CustomerComponent},
-    {path: 'house/detail{id}', component: ViewDetailComponent}
+    {path: 'house/:id', component: ViewDetailComponent}
 ];
 
 @NgModule({
