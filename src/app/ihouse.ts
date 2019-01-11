@@ -6,5 +6,5 @@ export interface IHouse {
     status: string;
     price: number;
     address: string;
-    img: string;
+    image: string;
 }
