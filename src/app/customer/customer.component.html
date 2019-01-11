@@ -151,69 +151,12 @@
 <h5 class="text-uppercase font-weight-bold" style="margin-left: 350px; margin-top: 30px; margin-bottom: 30px">Gợi ý từ
     HomeCodeGym</h5>
 <div class="container" style="margin-bottom: 25px">
-    <div class="row">
-        <div class="col-3">
+    <div class="row" >
+        <div class="col-3" *ngFor="let house of houses">
             <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu" class=" lazyloaded"
-                              src="https://cdn.luxstay.com/home/location/small/location_7_1546584476.png">
-
-                <p>Chung cư - Khánh Hòa, Vietnam</p>
-                <h3>Alibi's Tropical Room</h3>
-                <div class="price"> 877,800 ₫/đêm</div>
-                <div class="evaluate">
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                </div>
-            </a>
-        </div>
-        <div class="col-3">
-            <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
-                              src="https://cdn.luxstay.com/home/location/small/location_6_1546584469.png">
-
-                <p>Chung cư - Khánh Hòa, Vietnam</p>
-                <h3>Alibi's Tropical Room</h3>
-                <div class="price"> 877,800 ₫/đêm</div>
-                <div class="evaluate">
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                </div>
-            </a>
-        </div>
-        <div class="col-3">
-            <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
-                              src="https://cdn.luxstay.com/rooms/11930/thumbnail/1515401896_DSC_0516.jpg?w=200&h=133&fit=crop&v=147661">
-
-                <p>Chung cư - Khánh Hòa, Vietnam</p>
-                <h3>Alibi's Tropical Room</h3>
-                <div class="price"> 877,800 ₫/đêm</div>
-                <div class="evaluate">
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                </div>
-            </a>
-        </div>
-        <div class="col-3">
-            <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
-                              src="https://cdn.luxstay.com/rooms/14218/large/1534423224_41606518-520A-4897-9B90-5471960DEF8C.jpg">
-
-                <p>Chung cư - Khánh Hòa, Vietnam</p>
-                <h3>Alibi's Tropical Room</h3>
-                <div class="price"> 877,800 ₫/đêm</div>
-                <div class="evaluate">
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                    <i class="iconlux-star--gray"></i>
-                </div>
+                              src="http://127.0.0.1:8000/storage/{{house.image}}">
+                <h3>{{house.title}}</h3>
+                <div class="price">{{house.price}}</div>
             </a>
         </div>
     </div>
