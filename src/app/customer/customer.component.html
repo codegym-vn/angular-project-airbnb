@@ -153,11 +153,11 @@
 <div class="container" style="margin-bottom: 25px">
     <div class="row">
         <div class="col-3" *ngFor="let house of houses">
-            <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu" class=" lazyloaded"
-                              src="http://127.0.0.1:8000/storage/{{house.image}}">
-                <h3>{{house.title}}</h3>
-                <div class="price">{{house.price}}</div>
-            </a>
+            <img style="width: 100%" alt="Điểm đến hàng đầu" class=" lazyloaded"
+                 src="http://127.0.0.1:8000/storage/{{house.image}}">
+            <a [routerLink]="['/house', house.id]"><h3>{{house.title}}</h3></a>
+            <div class="price">{{house.price + ' VND'}}</div>
+
         </div>
     </div>
 </div>
