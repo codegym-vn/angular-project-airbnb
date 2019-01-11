@@ -3,11 +3,13 @@ import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {AppComponent} from './app.component';
 import {CustomerComponent} from './customer/customer.component';
+import { ViewDetailComponent } from './view-detail/view-detail.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        CustomerComponent
+        CustomerComponent,
+        ViewDetailComponent
     ],
     imports: [
         BrowserModule,
