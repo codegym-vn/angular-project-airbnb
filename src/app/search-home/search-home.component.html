@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Booking-home</title>
+</head>
+
+<body>
+<!--nav-bar-->
+<div class="container-fluid fixed-top">
+    <nav class="navbar navbar-light" style="background-color: #ffffff; height: 115px">
+        <figure id="logo" class="navbar-brand" style="margin-left: 150px">
+            <a [routerLink]="['/house']">
+                <img src="https://coinvn247.com/wp-content/uploads/2019/01/codegym.png" alt="HomeCodeGym"
+                     class="img-responsive" width="160px" height="100px"></a>
+        </figure>
+        <ul class="nav nav-pills">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle btn btn-outline-success" data-toggle="dropdown" href="#"
+                   role="button" aria-haspopup="true" aria-expanded="false">Dành cho chủ nhà</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                   aria-expanded="false">Ngôn ngữ</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#one">VI</a>
+                    <a class="dropdown-item" href="#two">EN</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                   aria-expanded="false">Đăng Nhập </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                   aria-expanded="false">Đăng ký</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!--nav-bar-->
+<br>
+<!--img Q/cao-->
+<div class="container" style="margin-top: 100px">
+    <div>
+        <img src="https://www.luxstay.com/blog/wp-content/uploads/2019/01/header-cuoi-tuan-1.png" style="width: 1095px">
+
+    </div>
+
+</div>
+<!--img Q/cao-->
+
+
+<div class="container" style="margin-top: 10px">
+    <div class="row">
+        <!--table gia-->
+        <!--row1-->
+        <div class="col-4" style="margin-bottom: 35px; margin-top: 35px">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-header" style="color: red">
+                    <h3>Tìm kiếm </h3>
+                </div>
+                <div class="form-group" style="margin-left: 10px; margin-right: 10px">
+                    <label style="margin-left: 10px; margin-top: 15px">Tên chỗ nghỉ / điểm
+                        đến </label>
+                    <input type="text" class="form-control" placeholder="address">
+                </div>
+                <div class="form-row" style="margin-top: 15px;margin-right: 10px;margin-left: 10px">
+                    <div class="form-group col-md-6">
+                        <label style="margin-left: 10px">Ngày nhận phòng </label>
+                        <input type="date" class="form-control">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label style="margin-left: 10px">Ngày trả phòng </label>
+                        <input type="date" class="form-control">
+                    </div>
+
+                    <label style="margin-left: 10px">Số lượng phòng ngủ </label>
+                    <select class="form-control form-control-auto">
+                        <option>1 Phòng</option>
+                        <option>2 Phòng</option>
+                        <option>3 Phòng</option>
+                        <option>4 Phòng</option>
+                        <option>5 Phòng</option>
+                        <option>6 Phòng</option>
+                    </select>
+                    <label style="margin-left: 10px; margin-top: 10px">Số lượng phòng tắm </label>
+                    <select class="form-control form-control-auto">
+                        <option>1 Phòng</option>
+                        <option>2 Phòng</option>
+                        <option>3 Phòng</option>
+                    </select>
+                    <label style="margin-left: 10px; margin-top: 10px">Giá tiền</label>
+                    <select class="form-control form-control-auto" style="margin-bottom: 10px">
+                        <option>Từ 500-900 đồng</option>
+                        <option>Từ 950-1.200 đồng</option>
+                        <option>Từ 1.300-1.500 đồng</option>
+                        <option>Từ 1.600-1.900 đồng</option>
+                    </select>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Tôi đi công tác
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"
+                            style="margin-bottom: 15px; margin-top: 15px; margin-left: 200px">Tìm kiếm
+                    </button>
+                </div>
+
+            </div>
+            <!--img-Q-cao-->
+            <div>
+                <img src="https://q-ec.bstatic.com/images/hotel/max1024x768/143/143242412.jpg"
+                     style="width: 350px; height: 200px">
+            </div>
+            <!--img-Q-cao-->
+            <div>
+                <div class="p-3 mb-2 bg-light text-dark" style="margin-top: 10px">
+                    Bạn thích chỗ nghỉ này, nhưng vẫn chưa chắc chắn?
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Xem các nhà tương tự</button>
+                </div>
+            </div>
+            <div class="p-3 mb-2 bg-info text-white">
+                <h4>Đăng ký nhận tin khuyến mãi từ HomeCodeGym </h4>
+                <p>Đăng ký để nhận ưu đãi qua email, với mức giảm giá đến 70%.</p>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                           placeholder="name@example.com">
+                </div>
+                <button type="button" class="btn btn-light" style="margin-left: 110px">Đăng ký</button>
+            </div>
+        </div>
+
+        <!--row1-->
+
+        <!--row2-->
+
+
+        <div class="col-8" style="margin-bottom: 25px; margin-top: 35px; color: black">
+            <div id="details" class="container-fluid">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100"
+                                 src="https://cdn.luxstay.com/rooms/16943/large/room_16943_3_1542784577.jpg"
+                                 alt="First slide" style="height: 400px; width: 300px">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>ABC</h5>
+                                <p>cde</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100"
+                                 src="https://cdn.luxstay.com/rooms/15176/large/1537408618_IMG_7906.jpg"
+                                 alt="Second slide" style="height: 400px; width: 300px">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>ABC</h5>
+                                <p>cde</p>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100"
+                                 src="https://cdn.luxstay.com/rooms/14436/large/1534908497_image_6483441%20(11).JPG"
+                                 alt="Third slide" style="height: 400px; width: 300px">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 routerLink="https://coinvn247.com">Alexnguyen </h5>
+                                <p>cde</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <button type="button" class="btn btn-primary" style="margin-bottom: -330px; margin-left: 35px">
+                            Xem Album
+                        </button>
+
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="container" style="margin-top: 20px">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="https://cdn.luxstay.com/rooms/14723/large/1535959160__MG_0737.jpg"
+                             style="height: 300px; width: 350px">
+                    </div>
+                    <div class="col-6">
+                        <h4><a target="_blank"
+                               href="#!"
+                               alt="Home 37M Đà Lạt with nice view and garden" class="ng-binding">Home 37M Đà Lạt with
+                            nice view and garden</a>
+                        </h4>
+                        <div class="apartment-txt">
+                            <div class="details-apartment">
+                                <div class="block-detail short-description pull-left">
+                                    <p class="ng-binding">Đây là một ngôi nhà vô cùng xinh xắn với view khoáng đạt và
+                                        những khu vườn nhỏ xinh đjep. Đây quả thực là một không gian sống mới tuyệt vời,
+                                        giúp bạn thư giãn sau những ngày làm việc mệt mỏi.</p>
+                                </div>
+                                <div class="block-detail block-title-listing">
+                                    <div class="apartment-address">
+                                        <a target="_blank"
+                                           href="https://www.google.com/maps/dir/11.9269818,108.4328845/"
+                                           title="Xem trên bản đồ" class="ng-binding">
+                                            <i class="fs-16 text-gray lst-icon-uniF123" aria-hidden="true"></i>
+                                            Triệu Việt Vương, Thành phố Đà Lạt, Lâm Đồng, Việt Nam
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="details-apartment">
+                                <div class="booking-type-block">
+                                    <p>Phương thức đặt phòng: <!-- ngIf: rooms.booking_type == 'instant_book' --><a
+                                            target="_blank"
+                                            href="#!"
+                                            data-ng-if="rooms.booking_type == 'instant_book'"
+                                            class="text-danger ng-scope">Đặt phòng nhanh</a>
+                                        <!-- end ngIf: rooms.booking_type == 'instant_book' -->
+                                        <!-- ngIf: rooms.booking_type == 'request_to_book' --></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-6">
+                        <img src="https://cdn.luxstay.com/rooms/14000/large/1536288310_IMG_5759.JPG"
+                             style="height: 300px; width: 350px">
+                    </div>
+                    <div class="col-6">
+                        <h4><a target="_blank"
+                               href="#!"
+                               alt="Home 37M Đà Lạt with nice view and garden" class="ng-binding">Home CodeGym My
+                            Dinh</a>
+                        </h4>
+                        <div class="apartment-txt">
+                            <div class="details-apartment">
+                                <div class="block-detail short-description pull-left">
+                                    <p class="ng-binding">Khách sạn The Luxe Đà Lạt được khởi công xây dựng năm 2017 và
+                                        chính thức đi vào hoạt động trong dịp Lễ 30 tháng 4 năm 2018, là sự lựa chọn phổ
+                                        biến cho cả doanh nhân và du lịch giải trí.</p>
+                                </div>
+                                <div class="block-detail block-title-listing">
+                                    <div class="apartment-address">
+                                        <a target="_blank"
+                                           href="https://www.google.com/maps/dir/11.9269818,108.4328845/"
+                                           title="Xem trên bản đồ" class="ng-binding">
+                                            <i class="fs-16 text-gray lst-icon-uniF123" aria-hidden="true"></i>
+                                            Triệu Việt Vương, Thành phố Đà Lạt, Lâm Đồng, Việt Nam
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="details-apartment">
+                                <div class="booking-type-block">
+                                    <p>Phương thức đặt phòng: <!-- ngIf: rooms.booking_type == 'instant_book' --><a
+                                            target="_blank"
+                                            href="#!"
+                                            data-ng-if="rooms.booking_type == 'instant_book'"
+                                            class="text-danger ng-scope">Đặt phòng nhanh</a>
+                                        <!-- end ngIf: rooms.booking_type == 'instant_book' -->
+                                        <!-- ngIf: rooms.booking_type == 'request_to_book' --></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-6">
+                        <img src="https://cdn.luxstay.com/rooms/11602/large/1504667455_3C9A3237.JPG"
+                             style="height: 300px; width: 350px">
+                    </div>
+                    <div class="col-6">
+                        <h4><a target="_blank"
+                               href="#!"
+                               alt="Home 37M Đà Lạt with nice view and garden" class="ng-binding">Villa Pine Forest -
+                            Triple Room
+                        </a>
+                        </h4>
+                        <div class="apartment-txt">
+                            <div class="details-apartment">
+                                <div class="block-detail short-description pull-left">
+                                    <p class="ng-binding">Không gian châu Âu đặt giữa chốn tiên cảnh Đà Lạt, Mén home
+                                        được thiết kế cổ điển pha chút hiện đại sẽ không làm bạn thất vọng khi đặt chân
+                                        đến đây. Mén home có 5 phòng ngủ đều có toilet riêng.</p>
+                                </div>
+                                <div class="block-detail block-title-listing">
+                                    <div class="apartment-address">
+                                        <a target="_blank"
+                                           href="https://www.google.com/maps/dir/11.9269818,108.4328845/"
+                                           title="Xem trên bản đồ" class="ng-binding">
+                                            <i class="fs-16 text-gray lst-icon-uniF123" aria-hidden="true"></i>
+                                            Triệu Việt Vương, Thành phố Đà Lạt, Lâm Đồng, Việt Nam
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="details-apartment">
+                                <div class="booking-type-block">
+                                    <p>Phương thức đặt phòng: <!-- ngIf: rooms.booking_type == 'instant_book' --><a
+                                            target="_blank"
+                                            href="#!"
+                                            data-ng-if="rooms.booking_type == 'instant_book'"
+                                            class="text-danger ng-scope">Đặt phòng nhanh</a>
+                                        <!-- end ngIf: rooms.booking_type == 'instant_book' -->
+                                        <!-- ngIf: rooms.booking_type == 'request_to_book' --></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-6">
+                        <img src="https://cdn.luxstay.com/rooms/11799/large/1510908176_F2737E41-CB69-4BEB-9415-C04111CAC99A.jpg"
+                             style="height: 300px; width: 350px">
+                    </div>
+                    <div class="col-6">
+                        <h4><a target="_blank"
+                               href="#!"
+                               alt="Home 37M Đà Lạt with nice view and garden" class="ng-binding">Romantic City Centre
+                            Apt with Hot Tub
+                        </a>
+                        </h4>
+                        <div class="apartment-txt">
+                            <div class="details-apartment">
+                                <div class="block-detail short-description pull-left">
+                                    <p class="ng-binding"> Romantic City Center Apt with Hot Tub giúp bạn có những trải
+                                        nghiệm tuyệt vời giữa lòng Hà Nội. Căn hộ này tuy nằm gữa lòng Hà Nội nhưng lại
+                                        vô cùng yên tĩnh và tạo cho bạn những không gian riêng hoàn hảo..</p>
+                                </div>
+                                <div class="block-detail block-title-listing">
+                                    <div class="apartment-address">
+                                        <a target="_blank"
+                                           href="https://www.google.com/maps/dir/11.9269818,108.4328845/"
+                                           title="Xem trên bản đồ" class="ng-binding">
+                                            <i class="fs-16 text-gray lst-icon-uniF123" aria-hidden="true"></i>
+                                            Triệu Việt Vương, Thành phố Đà Lạt, Lâm Đồng, Việt Nam
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="details-apartment">
+                                <div class="booking-type-block">
+                                    <p>Phương thức đặt phòng: <!-- ngIf: rooms.booking_type == 'instant_book' --><a
+                                            target="_blank"
+                                            href="#!"
+                                            data-ng-if="rooms.booking_type == 'instant_book'"
+                                            class="text-danger ng-scope">Đặt phòng nhanh</a>
+                                        <!-- end ngIf: rooms.booking_type == 'instant_book' -->
+                                        <!-- ngIf: rooms.booking_type == 'request_to_book' --></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--row2-->
+    </div>
+</div>
+<!--map-->
+
+<div id="map" style="width:1840px;height:400px;margin-bottom: 10px">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14896.507253139122!2d105.76029282856155!3d21.02761130371452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454bab9b67e93%3A0xbbe16aced529963f!2zTeG7uSDEkMOsbmgsIE5hbSBU4burIExpw6ptLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1547400029264"
+            width="1840" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<!--map-->
+
+
+
+<!-- Footer -->
+
+<div>
+    <footer class="page-footer font-small unique-color-dark">
+
+        <div style="background-color: #6351ce;">
+            <div class="container">
+
+                <div class="row d-flex align-items-center">
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h5 class="mb-0">Theo dõi chúng tôi !</h5>
+                    </div>
+                    <!-- Grid row-->
+                    <div class="d-flex flex-row-reverse" style="margin-top: 5px">
+                        <!-- Grid column -->
+                        <ul class="footerNavLinks">
+                            <a href="#!"><img
+                                    src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-facebook.png"
+                                    alt="Facebook"></a>
+                            <a href="#!"><img
+                                    src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-youtube.png"
+                                    alt="Youtube"></a>
+                            <a href="#!"><img
+                                    src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-telegram.png"
+                                    alt="Telegram"></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Grid column -->
+        </div>
+
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
+
+
+            <!-- Grid row -->
+            <div class="row mt-3">
+
+                <div class="section col-md-4">
+                    <a class="td-header-logo td-sticky-disable" href="https://coinvn247.com/">
+                        <img class="td-retina-data"
+
+                             src="https://coinvn247.com/wp-content/uploads/2019/01/homecodegum.png" height="150px"
+                             width="265px" alt="">
+                    </a>
+                </div>
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Hỗ trợ</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Câu hỏi thường </a>
+                    </p>
+                    <p>
+                        <a href="#!">Chính sách hủy</a>
+                    </p>
+                    <p>
+                        <a href="#!">Hướng dẫn đặt phòng</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Cẩm nang du lịch </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Đà Lạt </a>
+                    </p>
+                    <p>
+                        <a href="#!">Đà Nẵng </a>
+                    </p>
+                    <p>
+                        <a href="#!">SaPa </a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fas fa-home mr-3"></i> CodeGym, My Dinh, Ha Noi </p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> codegym@gmail.com</p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> + 08 234 567 88</p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> + 08 234 567 89</p>
+
+                </div>
+
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="#!">Bản quyền thuộc về Team CC </a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+</div>
+
+</body>
+</html>
