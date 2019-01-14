@@ -74,131 +74,382 @@
         </a>
     </div>
 </div>
-
-<h5 class="text-uppercase font-weight-bold" style="margin-left: 350px; margin-top: 30px; margin-bottom: 30px">Lựa chọn
-    tốt
-    nhất </h5>
-<div class="container">
+<!--end/slider-->
+<!--img Q/cao-->
+<div class="container-fluid" style="margin-top: 20px; margin-bottom: 0px">
     <div class="row">
-        <div class="col-3">
-
-            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
-                              src="http://tuvandulich.vn/data/News/image2.jpg">
-                <div class="DestinationsTxt">
-                    <h3>Thanh Hóa </h3>
-                </div>
-            </a>
-            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
-                              src="https://huehomestay.net/wp-content/uploads/2018/02/cover-min.png">
-                <div class="DestinationsTxt">
-                    <h3>Huế </h3>
-                </div>
-            </a>
-
+        <div class="col-1">
         </div>
-        <div class="col-3">
-
-            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
-                              src="https://image-us.24h.com.vn/upload/3-2018/images/2018-07-17/Kham-pha-4-homestay-dep-quen-loi-ve-tai-Sa-Pa-1-1531819672-672-width650height340.jpg">
-                <div class="DestinationsTxt">
-                    <h3>SaPa </h3>
-                </div>
-            </a>
-            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
-                              src="https://www.vntrip.vn/cam-nang/wp-content/uploads/2017/03/Long-Cung-la-mot-resort-nam-gan-canh-bien.jpeg">
-                <div class="DestinationsTxt">
-                    <h3>Vũng Tàu </h3>
-                </div>
-            </a>
-
+        <div class="col-10">
+            <div>
+                <img src="https://www.luxstay.com/blog/wp-content/uploads/2019/01/header-cuoi-tuan-1.png"
+                     style="width: 1491px">
+            </div>
         </div>
-        <div class="col-3">
-
-            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
-                              src="http://tintuc.khanhhoa79.com/upload/media/entries/2017-05/04/11124-0-d4be24e044727c4212f46fec4df11f17.jpg">
-                <div class="DestinationsTxt">
-                    <h3>Khánh Hòa </h3>
-                </div>
-            </a>
-            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
-                              src="https://www.chudu24.com/wp-content/uploads/2018/03/3-42.jpg">
-                <div class="DestinationsTxt">
-                    <h3>Nha Trang </h3>
-                </div>
-            </a>
-
-        </div>
-        <div class="col-3">
-
-            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
-                              src="http://media.we25.vn/images/homstay-thung-ruou2.jpg">
-                <div class="DestinationsTxt">
-                    <h3>Đà Lạt </h3>
-                </div>
-            </a>
-            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
-                              src="http://pystravel.vn/wp-content/uploads/2017/02/nen-di-dau-choi-30-4-pys-travel0131.jpg">
-                <div class="DestinationsTxt">
-                    <h3>Hải Phòng</h3>
-                </div>
-            </a>
-
-        </div>
-
-    </div>
-</div>
-<br>
-<h5 class="text-uppercase font-weight-bold" style="margin-left: 350px; margin-top: 30px; margin-bottom: 30px">Gợi ý từ
-    HomeCodeGym</h5>
-<div class="container" style="margin-bottom: 25px">
-    <div class="row">
-        <div class="col-3" *ngFor="let house of houses">
-            <img style="width: 100%" alt="Điểm đến hàng đầu" class=" lazyloaded"
-                 src="http://127.0.0.1:8000/storage/{{house.image}}" height="150">
-            <a [routerLink]="['/house', house.id]"><h3>{{house.title}}</h3></a>
-            <div class="price">{{house.price + ' VND'}}</div>
-
+        <div class="col-1">
         </div>
     </div>
 </div>
+<!--end img Q/cao-->
+<!--row-->
+<div class="container-fluid" style="margin-top: 10px">
+    <div class="row">
+        <div class="col-1">
+            <!--#-->
+        </div>
+        <div class="col-10">
+            <div class="row">
+                <div class="col-3" style="margin-bottom: 35px; margin-top: 35px">
+                    <div class="card text-white bg-warning mb-3">
+                        <div class="card-header" style="color: red">
+                            <h3>Tìm kiếm </h3>
+                        </div>
+                        <div class="form-group" style="margin-left: 10px; margin-right: 10px">
+                            <label style="margin-left: 10px; margin-top: 15px">Tên chỗ nghỉ / điểm
+                                đến </label>
+                            <input type="text" class="form-control" placeholder="address">
+                        </div>
+                        <div class="form-row" style="margin-top: 15px;margin-right: 10px;margin-left: 10px">
+                            <div class="form-group col-md-6">
+                                <label style="margin-left: 10px">Ngày nhận phòng </label>
+                                <input type="date" class="form-control">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label style="margin-left: 10px">Ngày trả phòng </label>
+                                <input type="date" class="form-control">
+                            </div>
+
+                            <label style="margin-left: 10px">Số lượng phòng ngủ </label>
+                            <select class="form-control form-control-auto">
+                                <option>1 Phòng</option>
+                                <option>2 Phòng</option>
+                                <option>3 Phòng</option>
+                                <option>4 Phòng</option>
+                                <option>5 Phòng</option>
+                                <option>6 Phòng</option>
+                            </select>
+                            <label style="margin-left: 10px; margin-top: 10px">Số lượng phòng tắm </label>
+                            <select class="form-control form-control-auto">
+                                <option>1 Phòng</option>
+                                <option>2 Phòng</option>
+                                <option>3 Phòng</option>
+                            </select>
+                            <label style="margin-left: 10px; margin-top: 10px">Giá tiền</label>
+                            <select class="form-control form-control-auto" style="margin-bottom: 10px">
+                                <option>Từ 500-900 đồng</option>
+                                <option>Từ 950-1.200 đồng</option>
+                                <option>Từ 1.300-1.500 đồng</option>
+                                <option>Từ 1.600-1.900 đồng</option>
+                            </select>
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">
+                                    Tôi đi công tác
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary"
+                                    style="margin-bottom: 15px; margin-top: 15px; margin-left: 140px">Tìm kiếm
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="p-3 mb-2 bg-light text-dark" style="margin-top: 10px">
+                            Bạn thích chỗ nghỉ này, nhưng vẫn chưa chắc chắn?
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Xem các nhà tương tự</button>
+                        </div>
+                    </div>
+                    <div class="p-3 mb-2 bg-info text-white">
+                        <h4>Đăng ký nhận tin khuyến mãi từ HomeCodeGym </h4>
+                        <p>Đăng ký để nhận ưu đãi qua email, với mức giảm giá đến 70%.</p>
+                        <div class="form-group">
+                            <input type="email" class="form-control"
+                                   placeholder="name@example.com">
+                        </div>
+                        <button type="button" class="btn btn-light" style="margin-left: 110px">Đăng ký</button>
+                    </div>
+                </div>
+                <!--end row 1-->
+
+                <!--row2-->
+                <div class="col-9" style="margin-bottom: 25px; margin-top: 35px; color: black">
+                    <div class="container">
+                        <h4 class="text-uppercase font-weight-bold"
+                            style="margin-left: 350px; margin-top: 30px; margin-bottom: 30px">Điểm đến hàng đầu
+                        </h4>
+                        <div class="container" style="margin-top: 20px; margin-bottom: 15px">
+                            <div class="row">
+                                <div class="col-4">
+
+                                    <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
+                                                      src="https://cdn.luxstay.com/home/location/small/location_8_1546584483.png">
+                                        <div class="DestinationsTxt">
+                                            <h3>Hà Nội </h3>
+                                        </div>
+                                    </a>
+
+                                </div>
+                                <div class="col-4">
+
+                                    <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
+                                                      src="https://cdn.luxstay.com/home/location/small/location_5_1546584455.png">
+                                        <div class="DestinationsTxt">
+                                            <h3> Đà Nẵng </h3>
+                                        </div>
+                                    </a>
+
+                                </div>
+                                <div class="col-4">
+
+                                    <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
+                                                      src="https://cdn.luxstay.com/home/location/small/location_2_1546584433.png">
+                                        <div class="DestinationsTxt">
+                                            <h3>Nha Trang </h3>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container" style="margin-top: 20px; margin-bottom: 15px">
+                            <div class="row">
+                                <div class="col-4">
+
+                                    <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
+                                                      src="https://cdn.luxstay.com/home/location/small/location_1_1546584395.png">
+                                        <div class="DestinationsTxt">
+                                            <h3>Đà lạt </h3>
+                                        </div>
+                                    </a>
+
+                                </div>
+                                <div class="col-4">
+
+                                    <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
+                                                      src="https://cdn.luxstay.com/home/location/small/location_5_1546584455.png">
+                                        <div class="DestinationsTxt">
+                                            <h3> Đà Nẵng </h3>
+                                        </div>
+                                    </a>
+
+                                </div>
+                                <div class="col-4">
+
+                                    <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
+                                                      src="https://cdn.luxstay.com/home/location/small/location_3_1546584441.png">
+                                        <div class="DestinationsTxt">
+                                            <h3>SaPa </h3>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container" style="margin-top: 20px; margin-bottom: 15px">
+                            <div class="row">
+                                <div class="col-4">
+
+                                    <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
+                                                      src="https://cdn.luxstay.com/home/location/small/location_2_1546584433.png">
+                                        <div class="DestinationsTxt">
+                                            <h3>Vũng Tàu </h3>
+                                        </div>
+                                    </a>
+
+                                </div>
+                                <div class="col-4">
+
+                                    <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
+                                                      src="https://cdn.luxstay.com/home/location/small/location_5_1546584455.png">
+                                        <div class="DestinationsTxt">
+                                            <h3> Đà Nẵng </h3>
+                                        </div>
+                                    </a>
+
+                                </div>
+                                <div class="col-4">
+
+                                    <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
+                                                      src="https://cdn.luxstay.com/home/location/small/location_2_1546584433.png">
+                                        <div class="DestinationsTxt">
+                                            <h3>Nha Trang </h3>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Q/cao-->
+                    <div class="container" style="margin-top: 5px">
+                        <div>
+                            <img src="https://cdn.luxstay.com/home/event/event_1_1547106326.jpg" style="width: 1095px">
+                        </div>
+                    </div>
+                    <!--end Q/cao-->
+                </div>
+                <!--row2-->
+
+            </div>
+        </div>
+        <div class="col-1">
+            <!--#-->
+        </div>
+    </div>
+</div>
+<!--end row-->
 <div class="container-fluid">
-    <nav id="footers" class="navbar navbar-light" style="background-color: #fcfbf7">
-
-        <div class="row">
-            <div class="col-4">
-                <div class="advantages-thumb"><img class=" lazyloaded"
-                                                   data-src="https://cdn.luxstay.com/home/talk/talk_11072018100744.png"
-                                                   src="https://cdn.luxstay.com/home/talk/talk_11072018100744.png">
-                </div>
-                <div class="advantages-txt"><h3>Lần đầu tiên tại Việt Nam</h3>
-                    <p>Ứng dụng cho thuê chỗ ở chuyên nghiệp, đặt phòng tin cậy cho HomeCodeGym cao cấp, căn hộ dịch vụ
-                        và
-                        biệt thự nghỉ dưỡng.</p></div>
-
-            </div>
-            <div class="col-4">
-                <div class="advantages-thumb"><img class=" lazyloaded"
-                                                   data-src="https://cdn.luxstay.com/home/talk/talk_5_1543569870.png"
-                                                   src="https://cdn.luxstay.com/home/talk/talk_5_1543569870.png"></div>
-                <div class="advantages-txt"><h3>Sống như người bản địa</h3>
-                    <p>Trải nghiệm không gian bản địa để chuyến du lịch có nhiều màu sắc. Chúng tôi mang đến những trải
-                        nghiệm hoàn toàn mới nhưng vẫn đảm bảo sự tiện lợi và riêng tư tuyệt đối.</p></div>
-
-            </div>
-            <div class="col-4">
-                <div class="advantages-thumb"><img class=" lazyloaded"
-                                                   data-src="https://cdn.luxstay.com/home/talk/talk_11072018100842.png"
-                                                   src="https://cdn.luxstay.com/home/talk/talk_11072018100842.png">
-                </div>
-                <div class="advantages-txt"><h3>Mỗi căn hộ một cá tính riêng</h3>
-                    <p>Từ những căn hộ hiện đại, biệt thự biệt lập cho đến những ngôi nhà truyền thống, chúng tôi không
-                        ngừng mở rộng danh sách để đem đến sự lựa chọn đa dạng cho khách hàng.</p></div>
-
-            </div>
-
+    <div class="row">
+        <div class="col-1">
+            <!--#-->
         </div>
-    </nav>
+        <div class="col-10">
+            <h4 class="text-uppercase font-weight-bold"
+                style="margin-top: 30px; margin-bottom: 30px">
+                Lựa chọn tốt nhất </h4>
+            <div class="row">
+                <div class="col-3">
+
+                    <a href="#!"><img style="width: 100%" height="250px" alt="Điểm đến hàng đầu"
+                                      src="http://tuvandulich.vn/data/News/image2.jpg">
+                        <div class="DestinationsTxt">
+                            <h3>Thanh Hóa </h3>
+                        </div>
+                    </a>
+                    <a href="#!"><img style="width: 100%" height="250px" alt="Điểm đến hàng đầu"
+                                      src="https://huehomestay.net/wp-content/uploads/2018/02/cover-min.png">
+                        <div class="DestinationsTxt">
+                            <h3>Huế </h3>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-3">
+
+                    <a href="#!"><img style="width: 100%" height="250px" alt="Điểm đến hàng đầu"
+                                      src="https://image-us.24h.com.vn/upload/3-2018/images/2018-07-17/Kham-pha-4-homestay-dep-quen-loi-ve-tai-Sa-Pa-1-1531819672-672-width650height340.jpg">
+                        <div class="DestinationsTxt">
+                            <h3>SaPa </h3>
+                        </div>
+                    </a>
+                    <a href="#!"><img style="width: 100%" height="250px" alt="Điểm đến hàng đầu"
+                                      src="https://www.vntrip.vn/cam-nang/wp-content/uploads/2017/03/Long-Cung-la-mot-resort-nam-gan-canh-bien.jpeg">
+                        <div class="DestinationsTxt">
+                            <h3>Vũng Tàu </h3>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-3">
+
+                    <a href="#!"><img style="width: 100%" height="250px" alt="Điểm đến hàng đầu"
+                                      src="http://tintuc.khanhhoa79.com/upload/media/entries/2017-05/04/11124-0-d4be24e044727c4212f46fec4df11f17.jpg">
+                        <div class="DestinationsTxt">
+                            <h3>Khánh Hòa </h3>
+                        </div>
+                    </a>
+                    <a href="#!"><img style="width: 100%" height="250px" alt="Điểm đến hàng đầu"
+                                      src="https://www.chudu24.com/wp-content/uploads/2018/03/3-42.jpg">
+                        <div class="DestinationsTxt">
+                            <h3>Nha Trang </h3>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-3">
+
+                    <a href="#!"><img style="width: 100%" height="250px" alt="Điểm đến hàng đầu"
+                                      src="http://media.we25.vn/images/homstay-thung-ruou2.jpg">
+                        <div class="DestinationsTxt">
+                            <h3>Đà Lạt </h3>
+                        </div>
+                    </a>
+                    <a href="#!"><img style="width: 100%" height="250px" alt="Điểm đến hàng đầu"
+                                      src="http://pystravel.vn/wp-content/uploads/2017/02/nen-di-dau-choi-30-4-pys-travel0131.jpg">
+                        <div class="DestinationsTxt">
+                            <h3>Hải Phòng</h3>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-1">
+                <!--#-->
+            </div>
+        </div>
+    </div>
 </div>
+<!--end row2-->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-1">
+            <!--#-->
+        </div>
+        <div class="col-10">
+            <h4 class="text-uppercase font-weight-bold"
+                style="margin-top: 30px; margin-bottom: 30px">Gợi ý từ
+                HomeCodeGym</h4>
+            <div class="row">
+                <div class="col-3" *ngFor="let house of houses">
+                    <img style="width: 100%" alt="Điểm đến hàng đầu" class=" lazyloaded"
+                         src="http://127.0.0.1:8000/storage/{{house.image}}" height="150">
+                    <a [routerLink]="['/house', house.id]"><h3>{{house.title}}</h3></a>
+                    <div class="price">{{house.price + ' VND'}}</div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="advantages-thumb"><img class=" lazyloaded"
+                                                       data-src="https://cdn.luxstay.com/home/talk/talk_11072018100744.png"
+                                                       src="https://cdn.luxstay.com/home/talk/talk_11072018100744.png">
+                    </div>
+                    <div class="advantages-txt"><h3>Lần đầu tiên tại Việt Nam</h3>
+                        <p>Ứng dụng cho thuê chỗ ở chuyên nghiệp, đặt phòng tin cậy cho HomeCodeGym cao cấp, căn
+                            hộ dịch vụ
+                            và
+                            biệt thự nghỉ dưỡng.</p></div>
+
+                </div>
+                <div class="col-4">
+                    <div class="advantages-thumb"><img class=" lazyloaded"
+                                                       data-src="https://cdn.luxstay.com/home/talk/talk_5_1543569870.png"
+                                                       src="https://cdn.luxstay.com/home/talk/talk_5_1543569870.png">
+                    </div>
+                    <div class="advantages-txt"><h3>Sống như người bản địa</h3>
+                        <p>Trải nghiệm không gian bản địa để chuyến du lịch có nhiều màu sắc. Chúng tôi mang đến
+                            những trải
+                            nghiệm hoàn toàn mới nhưng vẫn đảm bảo sự tiện lợi và riêng tư tuyệt đối.</p></div>
+
+                </div>
+                <div class="col-4">
+                    <div class="advantages-thumb"><img class=" lazyloaded"
+                                                       data-src="https://cdn.luxstay.com/home/talk/talk_11072018100842.png"
+                                                       src="https://cdn.luxstay.com/home/talk/talk_11072018100842.png">
+                    </div>
+                    <div class="advantages-txt"><h3>Mỗi căn hộ một cá tính riêng</h3>
+                        <p>Từ những căn hộ hiện đại, biệt thự biệt lập cho đến những ngôi nhà truyền thống,
+                            chúng tôi không
+                            ngừng mở rộng danh sách để đem đến sự lựa chọn đa dạng cho khách hàng.</p></div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-1">
+            <!--#-->
+        </div>
+    </div>
+</div>
+
 
 <div>
     <!-- Footer -->
@@ -230,7 +481,7 @@
                 </div>
             </div>
             <!-- Grid column -->
-        </div>git
+        </div>
 
 
         <!-- Footer Links -->
