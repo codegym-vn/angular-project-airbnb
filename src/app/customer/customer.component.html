@@ -52,7 +52,7 @@
             <div class="carousel-item active">
                 <img class="d-block w-100"
                      src="https://cdn.luxstay.com/rooms/12043/large/1518430184_Phong_kh%C3%A1ch_(Toan_canh).jpg"
-                     alt="First slide" style="height: 800px; width: 300px">
+                     alt="First slide" style="height: 700px; width: 300px">
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" src="https://cdn.luxstay.com/rooms/15176/large/1537408618_IMG_7906.jpg"
@@ -82,14 +82,14 @@
     <div class="row">
         <div class="col-3">
 
-            <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
-                              src="https://www.luxstay.com/blog/wp-content/uploads/2019/01/homestay-nha-trang-s-house-300x200.jpg">
+            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
+                              src="http://tuvandulich.vn/data/News/image2.jpg">
                 <div class="DestinationsTxt">
                     <h3>Thanh Hóa </h3>
                 </div>
             </a>
-            <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
-                              src="https://cdn.luxstay.com/home/location/small/location_8_1546584483.png">
+            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
+                              src="https://huehomestay.net/wp-content/uploads/2018/02/cover-min.png">
                 <div class="DestinationsTxt">
                     <h3>Huế </h3>
                 </div>
@@ -98,14 +98,14 @@
         </div>
         <div class="col-3">
 
-            <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
-                              src="https://cdn.luxstay.com/rooms/12550/thumbnail/1526052146_123059696.jpg?w=200&h=133&fit=crop&v=147661">
+            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
+                              src="https://image-us.24h.com.vn/upload/3-2018/images/2018-07-17/Kham-pha-4-homestay-dep-quen-loi-ve-tai-Sa-Pa-1-1531819672-672-width650height340.jpg">
                 <div class="DestinationsTxt">
                     <h3>SaPa </h3>
                 </div>
             </a>
-            <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
-                              src="https://cdn.luxstay.com/home/location/small/location_8_1546584483.png">
+            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
+                              src="https://www.vntrip.vn/cam-nang/wp-content/uploads/2017/03/Long-Cung-la-mot-resort-nam-gan-canh-bien.jpeg">
                 <div class="DestinationsTxt">
                     <h3>Vũng Tàu </h3>
                 </div>
@@ -114,14 +114,14 @@
         </div>
         <div class="col-3">
 
-            <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
-                              src="https://cdn.luxstay.com/home/location/small/location_4_1546584448.png">
+            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
+                              src="http://tintuc.khanhhoa79.com/upload/media/entries/2017-05/04/11124-0-d4be24e044727c4212f46fec4df11f17.jpg">
                 <div class="DestinationsTxt">
                     <h3>Khánh Hòa </h3>
                 </div>
             </a>
-            <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
-                              src="https://cdn.luxstay.com/rooms/13123/thumbnail/1529484407_29432654_962240693931410_2551760754839650304_n.jpg?w=200&h=133&fit=crop&v=147661">
+            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
+                              src="https://www.chudu24.com/wp-content/uploads/2018/03/3-42.jpg">
                 <div class="DestinationsTxt">
                     <h3>Nha Trang </h3>
                 </div>
@@ -130,14 +130,14 @@
         </div>
         <div class="col-3">
 
-            <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
-                              src="https://cdn.luxstay.com/home/location/small/location_8_1546584483.png">
+            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
+                              src="http://media.we25.vn/images/homstay-thung-ruou2.jpg">
                 <div class="DestinationsTxt">
                     <h3>Đà Lạt </h3>
                 </div>
             </a>
-            <a href="#!"><img style="width: 100%" alt="Điểm đến hàng đầu"
-                              src="https://cdn.luxstay.com/home/location/small/location_7_1546584476.png">
+            <a href="#!"><img style="width: 100%" height="150px" alt="Điểm đến hàng đầu"
+                              src="http://pystravel.vn/wp-content/uploads/2017/02/nen-di-dau-choi-30-4-pys-travel0131.jpg">
                 <div class="DestinationsTxt">
                     <h3>Hải Phòng</h3>
                 </div>
@@ -154,7 +154,7 @@
     <div class="row">
         <div class="col-3" *ngFor="let house of houses">
             <img style="width: 100%" alt="Điểm đến hàng đầu" class=" lazyloaded"
-                 src="http://127.0.0.1:8000/storage/{{house.image}}">
+                 src="http://127.0.0.1:8000/storage/{{house.image}}" height="150">
             <a [routerLink]="['/house', house.id]"><h3>{{house.title}}</h3></a>
             <div class="price">{{house.price + ' VND'}}</div>
 
