@@ -339,12 +339,20 @@
                 HomeCodeGym</h4>
             <div class="row">
                 <div class="col-3" *ngFor="let house of houses">
-                    <div *ngIf="house.status === 'Chưa cho thuê'">
-                        <img style="width: 100%" alt="Điểm đến hàng đầu" class=" lazyloaded shake"
-                             src="http://127.0.0.1:8000/storage/{{house.image[0]}}" height="150">
-                        <a [routerLink]="['/house', house.id]"><h3>{{house.title}}</h3></a>
-                        <div class="price">{{house.price.toLocaleString() + ' VND'}}</div>
+
+                    <img style="width: 100%" alt="Điểm đến hàng đầu" class=" lazyloaded shake"
+                         src="http://127.0.0.1:8000/storage/{{house.image[0]}}" height="150">
+                    <a style="color: black" [routerLink]="['/house', house.id]"><h3>{{house.title}}</h3></a>
+                    <div class="price">{{house.price.toLocaleString() + ' VND'}}</div>
+
+                    <div *ngIf="house.status === 'Chưa cho thuê';else status">
+                        <div class="status"
+                             style="background-color: lightgreen; text-align: center">{{house.status}}</div>
                     </div>
+                    <ng-template #status>
+                        <div class="status"
+                             style="background-color: chartreuse; text-align: center">{{house.status}}</div>
+                    </ng-template>
                 </div>
             </div>
 
