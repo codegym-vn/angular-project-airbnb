@@ -5,11 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>view-datail</title>
+    <title>view-detail</title>
 </head>
 <body>
-<!--nav-bar-->
-<!--nav-bar-->
+
+
 <div class="container-fluid fixed-top">
     <nav class="navbar navbar-light" style="background-color: gainsboro; height: 115px">
         <figure id="logo" class="navbar-brand" style="margin-left: 150px">
@@ -37,8 +37,10 @@
 <div class="container" style="margin-top: 150px; margin-bottom: 35px">
     <div class="row">
         <div class="col-8">
+            <div class="title">
+                <h3 style="text-align: center; font-size: 38px">{{house.title}}</h3>
+            </div>
 
-            <h3 style="text-align: center; font-size: 38px">{{house.title}}</h3>
             <h4>Giá</h4>
             <p style="color: red">
                 {{house.price.toLocaleString() + 'VND'}}
