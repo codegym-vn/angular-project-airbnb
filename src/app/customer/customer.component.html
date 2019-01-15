@@ -347,11 +347,11 @@
 
                     <div *ngIf="house.status === 'Chưa cho thuê';else status">
                         <div class="status"
-                             style="background-color: lightgreen; text-align: center">{{house.status}}</div>
+                             style="background-color: lightgreen; text-align: center;  margin-bottom: 20px">{{house.status}}</div>
                     </div>
                     <ng-template #status>
                         <div class="status"
-                             style="background-color: chartreuse; text-align: center">{{house.status}}</div>
+                             style="background-color: chartreuse; text-align: center;  margin-bottom: 20px">{{house.status}}</div>
                     </ng-template>
                 </div>
             </div>
