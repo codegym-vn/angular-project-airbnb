@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Home</title>
 
 </head>
@@ -76,6 +75,7 @@
 </div>
 <!--end/slider-->
 <!--img Q/cao-->
+
 <div class="container-fluid" style="margin-top: 20px; margin-bottom: 0px">
     <div class="row">
         <div class="col-1">
@@ -398,11 +398,12 @@
                 HomeCodeGym</h4>
             <div class="row">
                 <div class="col-3" *ngFor="let house of houses">
-                    <img style="width: 100%" alt="Điểm đến hàng đầu" class=" lazyloaded"
-                         src="http://127.0.0.1:8000/storage/{{house.image}}" height="150">
-                    <a [routerLink]="['/house', house.id]"><h3>{{house.title}}</h3></a>
-                    <div class="price">{{house.price.toLocaleString() + ' VND'}}</div>
-
+                    <div *ngIf="house.status === 'Chưa cho thuê'">
+                        <img style="width: 100%" alt="Điểm đến hàng đầu" class=" lazyloaded"
+                             src="http://127.0.0.1:8000/storage/{{house.image[0]}}" height="150">
+                        <a [routerLink]="['/house', house.id]"><h3>{{house.title}}</h3></a>
+                        <div class="price">{{house.price.toLocaleString() + ' VND'}}</div>
+                    </div>
                 </div>
             </div>
 
