@@ -6,13 +6,15 @@ import {CustomerComponent} from './customer/customer.component';
 import { ViewDetailComponent } from './view-detail/view-detail.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { BookingHome3Component } from './booking-home3/booking-home3.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         CustomerComponent,
         ViewDetailComponent,
-        BookingHome3Component
+        BookingHome3Component,
+        ProfileComponent
     ],
     imports: [
         BrowserModule,
