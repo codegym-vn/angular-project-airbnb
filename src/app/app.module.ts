@@ -6,7 +6,7 @@ import {HomeComponent} from './home/home.component';
 import { ViewDetailComponent } from './view-detail/view-detail.component';
 import { OrderComponent } from './order/order.component';
 import {AppRoutingModule} from './app-routing.module';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CustomerComponent } from './customer/customer.component';
 
 @NgModule({
@@ -21,7 +21,8 @@ import { CustomerComponent } from './customer/customer.component';
         BrowserModule,
         HttpClientModule,
         AppRoutingModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

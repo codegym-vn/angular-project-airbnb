@@ -13,7 +13,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class ViewDetailComponent implements OnInit {
     house: IHouse;
-    // order: Iorder[];
+    order: Iorder;
     addOrderForm: FormGroup;
 
     constructor(private houseService: HouseService,
@@ -33,25 +33,21 @@ export class ViewDetailComponent implements OnInit {
         this.addOrderForm = this.formBuilder.group({
             checkIn: '',
             checkOut: '',
+            house_id: '',
         });
     }
 
     onSubmit() {
-        // e.preventDefault();
-        // const target = e.target;
-        // const checkIn = target.querySelector('#checkIn').value;
-        // const checkOut = target.querySelector('#checkOut').value;
-        // console.log(checkIn);
-        // console.log(checkOut);
         const value = this.addOrderForm.value;
-        // const {value} = this.addOrderForm;
-        // const data = {...this.addOrderForm, ...value};
         this.orderService.addOrder(value).subscribe(
-            order => {
+            data => {
                 // this.order.unshift(order);
                 this.router.navigateByUrl('order');
             }
         );
+        // console.log(this.order.checkIn);
+        // console.log(this.order.checkOut);
+        // console.log(this.order.house_id);
     }
 
 

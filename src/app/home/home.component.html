@@ -336,7 +336,7 @@
                     <img style="width: 100%" alt="Điểm đến hàng đầu" class=" lazyloaded shake"
                          src="http://127.0.0.1:8000/storage/{{house.image[0]}}" height="150">
                     <a style="color: black" [routerLink]="['/show', house.id]"><h3>{{house.title}}</h3></a>
-                    <div class="price">{{house.price.toLocaleString() + ' VND'}}</div>
+                    <div class="price">{{house.price.toLocaleString() + 'VND ngày/đêm'}}</div>
 
                     <div *ngIf="house.status === 'Chưa cho thuê';else status">
                         <div class="status"
