@@ -19,11 +19,11 @@
 }
 
 .box-txt {
-    padding: 15px 24px 0;
-    padding-top: 15px;
-    padding-right: 24px;
-    padding-bottom: 0px;
-    padding-left: 24px;
+    padding: 15px 24px 0 24px;
+    /*padding-top: 15px;*/
+    /*padding-right: 24px;*/
+    /*padding-bottom: 0px;*/
+    /*padding-left: 24px;*/
 }
 
 

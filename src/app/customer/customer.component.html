@@ -12,7 +12,7 @@
 <div class="container-fluid fixed-top">
     <nav class="navbar navbar-light" style="background-color: #ffffff; height: 115px">
         <figure id="logo" class="navbar-brand" style="margin-left: 150px">
-            <a [routerLink]="['/house']">
+            <a [routerLink]="['/']">
                 <img src="https://coinvn247.com/wp-content/uploads/2019/01/codegym.png" alt="HomeCodeGym"
                      class="img-responsive" width="160px" height="100px"></a>
         </figure>
@@ -335,7 +335,7 @@
 
                     <img style="width: 100%" alt="Điểm đến hàng đầu" class=" lazyloaded shake"
                          src="http://127.0.0.1:8000/storage/{{house.image[0]}}" height="150">
-                    <a style="color: black" [routerLink]="['/house', house.id]"><h3>{{house.title}}</h3></a>
+                    <a style="color: black" [routerLink]="['/show', house.id]"><h3>{{house.title}}</h3></a>
                     <div class="price">{{house.price.toLocaleString() + ' VND'}}</div>
 
                     <div *ngIf="house.status === 'Chưa cho thuê';else status">
