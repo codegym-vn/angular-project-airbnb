@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Iorder} from '../iorder';
+import {OrderService} from '../order.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-order',
@@ -6,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent implements OnInit {
-
-  constructor() { }
+  order: Iorder[];
+  constructor(private orderService: OrderService,
+              private router: Router) { }
 
   ngOnInit() {
   }
+
+
 
 }
