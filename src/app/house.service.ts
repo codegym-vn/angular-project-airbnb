@@ -20,7 +20,7 @@ export class HouseService {
         return this.http.get<IHouse>(`${this.API_URL}/${id}`);
     }
 
-    searchHouse(): Observable<IHouse[]> {
-        return this.http.get<IHouse[]>(this.API_URL + '/search');
+    searchHouse(keyword): Observable<IHouse[]> {
+        return this.http.get<IHouse[]>(`${this.API_URL}/search/${keyword}`);
     }
 }

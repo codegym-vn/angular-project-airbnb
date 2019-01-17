@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {IHouse} from '../ihouse';
 import {HouseService} from '../house.service';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
     selector: 'app-customer',
@@ -9,12 +10,18 @@ import {HouseService} from '../house.service';
 })
 export class HomeComponent implements OnInit {
     houses: IHouse[] = [];
-
-    constructor(private houseService: HouseService) {
+    searchForm: FormGroup;
+    keyword: string;
+    constructor(private houseService: HouseService,
+                private formBuilder: FormBuilder) {
     }
 
     ngOnInit() {
         this.getHouses();
+        this.searchForm = this.formBuilder.group({
+            keyword: ''
+        });
+
     }
 
     getHouses() {
@@ -22,6 +29,14 @@ export class HomeComponent implements OnInit {
             data => {
                 this.houses = data;
             });
+    }
+
+    searchHouse() {
+        this.houseService.searchHouse(this.keyword).subscribe(
+            data => {
+                this.houses = data;
+            }
+        );
     }
 
 }

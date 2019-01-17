@@ -3,8 +3,8 @@ import {IHouse} from '../ihouse';
 import {HouseService} from '../house.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Iorder} from '../iorder';
-import {OrderService} from '../order.service';
 import {FormBuilder, FormGroup} from '@angular/forms';
+import {OrderService} from '../order.service';
 
 @Component({
     selector: 'app-view-detail',

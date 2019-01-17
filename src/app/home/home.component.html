@@ -117,27 +117,29 @@
                             <!--<option>2 Phòng</option>-->
                             <!--<option>3 Phòng</option>-->
                             <!--</select>-->
-                            <form>
-                                <label style="margin-left: 10px; margin-top: 10px">Giá tiền</label>
-                                <select class="form-control form-control-auto" style="margin-bottom: 10px"
-                                        name="keyword">
-                                    <option value="1">Từ 5 trăm - 1 triệu</option>
-                                    <option value="2">Từ 1 triệu - 1.5 triệu</option>
-                                    <option value="3">Từ 1.5 triệu - 2 triệu</option>
-                                    <option value="4">Từ 2 triệu - 2.5 triệu</option>
-                                </select>
-                                <br>
-                                <!--<div class="form-check">-->
+                            <div>
+                                <form (ngSubmit)="searchHouse()" [formGroup]="searchForm">
+                                    <label style="margin-left: 10px; margin-top: 10px">Giá tiền</label>
+                                    <select class="form-control form-control-auto" style="margin-bottom: 10px"
+                                            name="keyword" formControlName="keyword" [(ngModel)]="keyword">
+                                        <option value="1">Từ 5 trăm - 1 triệu</option>
+                                        <option value="2">Từ 1 triệu - 1.5 triệu</option>
+                                        <option value="3">Từ 1.5 triệu - 2 triệu</option>
+                                        <option value="4">Từ 2 triệu - 2.5 triệu</option>
+                                    </select>
+                                    <br>
+                                    <!--<div class="form-check">-->
                                     <!--<input class="form-check-input" type="checkbox">-->
                                     <!--<label class="form-check-label">-->
-                                        <!--Tôi đi công tác-->
+                                    <!--Tôi đi công tác-->
                                     <!--</label>-->
-                                <!--</div>-->
+                                    <!--</div>-->
 
-                                <button type="submit" class="btn btn-primary"
-                                        style="margin-bottom: 15px; margin-top: 15px; margin-left: 140px">Tìm kiếm
-                                </button>
-                            </form>
+                                    <button type="submit" class="btn btn-primary"
+                                            style="margin-bottom: 15px; margin-top: 15px; margin-left: 140px">Tìm kiếm
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <div>
