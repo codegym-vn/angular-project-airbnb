@@ -1,19 +1,17 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
 </head>
 <body>
-
 <!--nav-bar-->
 <div class="container-fluid">
-    <nav class="navbar navbar-light" style="background-color: #ffffff; height: 115px">
-        <figure id="logo" class="navbar-brand" style="margin-left: 150px">
+    <nav class="navbar navbar-light" style="background-color: #ffffff; height: 50px">
+        <figure id="logo" class="navbar-brand" style="margin-left: 50px">
             <a [routerLink]="['/house']">
                 <img src="https://coinvn247.com/wp-content/uploads/2019/01/codegym.png" alt="HomeCodeGym"
                      class="img-responsive" width="160px" height="100px"></a>
@@ -39,91 +37,61 @@
 <!--end/nav-bar-->
 
 <!---profile--->
-
-<div class="container-fluid" style="margin-top: 50px">
+<div class="container" style="background-color: azure; margin-bottom: 50px; margin-top: 150px">
     <div class="row">
-        <div class="col-2">
-            <!--#-->
-        </div>
-        <div class="col-8" style="color: red">
-            <div class="row">
-                <div class="col-3">
-                    <div class="card text-white bg-light mb-3">
-                        <div class="card-header" style="color: black">
-                            <div class="row">
-                                <div class="col-2">
-                                    <img src="https://coinvn247.com/wp-content/uploads/2019/01/coinvn247logo.png"
-                                         style="height: 40px; width: 40px">
-                                </div>
-                                <div class="col-10" style="margin-top: 10px">
-                                    <h6 style="margin-left: 25px"> Coinvn247</h6>
-                                    <p> Coinvn247@gmail.com</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--tab_profile-->
-                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
-                           role="tab" aria-controls="v-pills-home" aria-selected="true" style="margin-bottom: 10px">Quản
-                            lý đặt nhà </a>
-                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
-                           role="tab" aria-controls="v-pills-profile" aria-selected="false" style="margin-bottom: 10px">Hồ
-                            sơ cá nhân </a>
-                        <a class="nav-link" id="v-pills-profile_img-tab" data-toggle="pill" href="#v-pills-profile_img"
-                           role="tab" aria-controls="v-pills-profile_img" aria-selected="false"
-                           style="margin-bottom: 10px">Ảnh đại diện </a>
-                        <a class="nav-link" id="v-pills-verifying_img-tab" data-toggle="pill" href="#v-pills-verifying"
-                           role="tab" aria-controls="v-pills-verifying" aria-selected="false"
-                           style="margin-bottom: 10px">Xác thực tài khoản </a>
-                        <a class="nav-link" id="v-pills-payment-tab" data-toggle="pill" href="#v-pills-payment"
-                           role="tab" aria-controls="v-pills-payment" aria-selected="false" style="margin-bottom: 10px">Phương
-                            thức thanh toán </a>
-                        <a class="nav-link" id="v-pills-inbox-tab" data-toggle="pill" href="#v-pills-inbox" role="tab"
-                           aria-controls="v-pills-inbox" aria-selected="false" style="margin-bottom: 10px">Hộp tin
-                            nhắn </a>
-                        <a class="nav-link" id="v-pills-security -tab" data-toggle="pill" href="#v-pills-security"
-                           role="tab" aria-controls="v-pills-security" aria-selected="false"
-                           style="margin-bottom: 10px">Thây đổi mật khẩu </a>
-                        <a class="nav-link" id="v-pills-logout-tab" data-toggle="pill" href="#v-pills-logout" role="tab"
-                           aria-controls="v-pills-logout" aria-selected="false" style="margin-bottom: 10px">Đăng
-                            xuất </a>
-                    </div>
-
-                    <script>
-                        $(function () {
-                            $('#myTab a[href="#profile"]').tab('Home') // Select tab by name
-                            $('#myTab li:first-child a').tab('profile') // Select first tab
-                            $('#myTab li:last-child a').tab('show') // Select last tab
-                            $('#myTab li:last-child a').tab('show') // Select last tab
-                            $('#myTab li:last-child a').tab('show') // Select last tab
-                            $('#myTab li:last-child a').tab('show') // Select last tab
-                            $('#myTab li:last-child a').tab('show') // Select last tab
-                            $('#myTab li:nth-child(3) a').tab('show') // Select third tab
-                        })
-                    </script>
-                    <!---end tab_profile-->
-                    <div class="card text-white bg-light mb-3">
-                        <div class="card-header" style="color: black">
-
-                            <p style="margin-left: 20px"> Hỗ trợ khách hàng </p>
-
-                            <p style="margin-left: 20px"> Hotline: 0983692323 </p>
-
-                        </div>
-                    </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="column1">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                       role="tab" aria-controls="v-pills-home" aria-selected="true" style="margin-bottom: 10px">Quản
+                        lý đặt nhà </a>
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+                       role="tab" aria-controls="v-pills-profile" aria-selected="false" style="margin-bottom: 10px">Hồ
+                        sơ cá nhân </a>
+                    <a class="nav-link" id="v-pills-profile_img-tab" data-toggle="pill" href="#v-pills-profile_img"
+                       role="tab" aria-controls="v-pills-profile_img" aria-selected="false"
+                       style="margin-bottom: 10px">Ảnh đại diện </a>
+                    <a class="nav-link" id="v-pills-verifying_img-tab" data-toggle="pill" href="#v-pills-verifying"
+                       role="tab" aria-controls="v-pills-verifying" aria-selected="false"
+                       style="margin-bottom: 10px">Xác thực tài khoản </a>
+                    <a class="nav-link" id="v-pills-payment-tab" data-toggle="pill" href="#v-pills-payment"
+                       role="tab" aria-controls="v-pills-payment" aria-selected="false" style="margin-bottom: 10px">Phương
+                        thức thanh toán </a>
+                    <a class="nav-link" id="v-pills-inbox-tab" data-toggle="pill" href="#v-pills-inbox" role="tab"
+                       aria-controls="v-pills-inbox" aria-selected="false" style="margin-bottom: 10px">Hộp tin
+                        nhắn </a>
+                    <a class="nav-link" id="v-pills-security -tab" data-toggle="pill" href="#v-pills-security"
+                       role="tab" aria-controls="v-pills-security" aria-selected="false"
+                       style="margin-bottom: 10px">Thây đổi mật khẩu </a>
+                    <a class="nav-link" id="v-pills-logout-tab" data-toggle="pill" href="#v-pills-logout" role="tab"
+                       aria-controls="v-pills-logout" aria-selected="false" style="margin-bottom: 10px">Đăng
+                        xuất </a>
                 </div>
-                <div class="col-9">
+                <script>
+                    $(function () {
+                        $('#myTab a[href="#profile"]').tab('Home') // Select tab by name
+                        $('#myTab li:first-child a').tab('profile') // Select first tab
+                        $('#myTab li:last-child a').tab('show') // Select last tab
+                        $('#myTab li:last-child a').tab('show') // Select last tab
+                        $('#myTab li:last-child a').tab('show') // Select last tab
+                        $('#myTab li:last-child a').tab('show') // Select last tab
+                        $('#myTab li:last-child a').tab('show') // Select last tab
+                        $('#myTab li:nth-child(3) a').tab('show') // Select third tab
+                    })
+                </script>
 
-                    <!--tab_profile-->
-                    <div class="tab-content" id="v-pills-tabContent">
-                        <!--home-->
-                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                             aria-labelledby="v-pills-home-tab">
-                            <h3 style="margin-bottom: 20px; color: black"> Quản lý đặt nhà </h3>
-
-                            <button type="button" class="btn btn-danger btn-lg btn-block">Tổng số đặt phòng</button>
-                            <table class="table table-bordered">
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-6 col-xs-12">
+            <div class="column2">
+                <!--tab_profile-->
+                <div class="tab-content" id="v-pills-tabContent">
+                    <!--home-->
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                         aria-labelledby="v-pills-home-tab">
+                        <h3 style="margin-bottom: 20px; color: black"> Quản lý đặt nhà </h3>
+                        <div class="container">
+                            <table class="table table-bordered col-xs-12">
                                 <thead>
                                 <tr>
                                     <th scope="col">STT</th>
@@ -149,301 +117,306 @@
                                         <button type="button" class="btn btn-primary btn-sm">Chi tiết đặt phòng</button>
                                     </td>
                                 </tr>
-
                                 </tbody>
                             </table>
                         </div>
-                        <!--end_home-->
+                    </div>
+                    <!--end_home-->
+                    <!--profile-->
 
-                        <!--profile-->
-                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                             aria-labelledby="v-pills-profile-tab">
-                            <h3 style="margin-bottom: 20px; color: black"> Hồ sơ cá nhân </h3>
-                            <p>Hoàn thành chi tiết hồ sơ giúp cho việc book chỗ được nhanh hơn và dễ hơn</p>
-                            <div class="row">
-                                <div class="col-2">
-                                    Tên *:
-                                </div>
-                                <div class="col-10">
-                                    <form>
-                                        <div class="form-row">
-                                            <div class="col-2">
-                                                <select id="inputState" class="form-control">
-                                                    <option selected>Ông</option>
-                                                    <option>Bà</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-5">
-                                                <input type="text" class="form-control" placeholder="First name">
-                                            </div>
-                                            <div class="col-5">
-                                                <input type="text" class="form-control" placeholder="Last name">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                         aria-labelledby="v-pills-profile-tab">
+                        <h3 style="margin-bottom: 20px; color: black"> Hồ sơ cá nhân </h3>
+                        <p>Hoàn thành chi tiết hồ sơ giúp cho việc book chỗ được nhanh hơn và dễ hơn</p>
+                        <div class="row">
+                            <div class="col-md-2 col-sm-6 col-xs-12">
+                                Tên *:
                             </div>
-                            <div class="row" style="margin-top: 20px">
-                                <div class="col-2">
-                                    Email *:
-                                </div>
-                                <div class="col-10">
-                                    <form>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-12">
-                                                <input type="email" class="form-control" id="inputEmail4"
-                                                       placeholder="Email">
-                                            </div>
+                            <div class="col-md-10 col-sm-6 col-xs-12">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="col-2">
+                                            <select id="inputState" class="form-control">
+                                                <option selected>Ông</option>
+                                                <option>Bà</option>
+                                            </select>
                                         </div>
-                                    </form>
-                                </div>
-
-                            </div>
-                            <div class="row" style="margin-top: 20px">
-                                <div class="col-2">
-                                    Ngày sinh *:
-                                </div>
-                                <div class="col-10">
-                                    <form>
-                                        <div class="form-row">
-                                            <div class="col">
-                                                <select class="form-control">
-                                                    <option selected>Ngày</option>
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                    <option>6</option>
-                                                    <option>7</option>
-                                                    <option>8</option>
-                                                    <option>9</option>
-                                                    <option>10</option>
-                                                    <option>11</option>
-                                                    <option>12</option>
-                                                    <option>13</option>
-                                                    <option>14</option>
-                                                    <option>15</option>
-                                                    <option>16</option>
-                                                    <option>17</option>
-                                                    <option>18</option>
-                                                    <option>19</option>
-                                                    <option>20</option>
-                                                    <option>21</option>
-                                                    <option>22</option>
-                                                    <option>23</option>
-                                                    <option>24</option>
-                                                    <option>25</option>
-                                                    <option>26</option>
-                                                    <option>27</option>
-                                                    <option>28</option>
-                                                    <option>29</option>
-                                                    <option>30</option>
-                                                    <option>31</option>
-                                                </select>
-                                            </div>
-                                            <div class="col">
-                                                <select class="form-control">
-                                                    <option selected>Tháng</option>
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                    <option>6</option>
-                                                    <option>7</option>
-                                                    <option>8</option>
-                                                    <option>9</option>
-                                                    <option>10</option>
-                                                    <option>11</option>
-                                                    <option>12</option>
-                                                </select>
-                                            </div>
-                                            <div class="col">
-                                                <select class="form-control">
-                                                    <option selected>Năm</option>
-                                                </select>
-                                            </div>
+                                        <div class="col-5">
+                                            <input type="text" class="form-control" placeholder="First name">
                                         </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="row" style="margin-top: 20px">
-                                <div class="col-2">
-                                    Số điện thoại *:
-                                </div>
-                                <div class="col-10">
-                                    <form>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-12">
-                                                <input type="phone" class="form-control"
-                                                       placeholder="+84">
-                                            </div>
+                                        <div class="col-5">
+                                            <input type="text" class="form-control" placeholder="Last name">
                                         </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="row" style="margin-top: 20px">
-                                <div class="col-2">
-                                    Bạn sống ở đau*:
-                                </div>
-                                <div class="col-10">
-                                    <form>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-12">
-                                                <input class="form-control">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-
-                            </div>
-                            <div class="row" style="margin-top: 20px">
-                                <div class="col-2">
-                                    CMND, Hộ chiếu
-                                    <br>
-                                    Giấy tờ tùy thân*:
-                                </div>
-                                <div class="col-10">
-                                    <form>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-12">
-                                                <input placeholder="Vui lòng nhập mã CMND hoặc hộ chiếu của bạn"
-                                                       class="form-control">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary" style="margin-left: 150px; margin-top: 25px">
-                                Submit
-                            </button>
-
-                        </div>
-                        <!--end-profile-->
-
-                        <!--profile_img-->
-                        <div class="tab-pane fade" id="v-pills-profile_img" role="tabpanel"
-                             aria-labelledby="v-pills-profile_img-tab">
-                            <h3 style="margin-bottom: 20px; color: black"> Ảnh đại diện </h3>
-                            <div class="row">
-                                <div class="col-4">
-                                    <img src="https://coinvn247.com/wp-content/uploads/2019/01/coinvn247logo.png"
-                                         style="height: 250px; width: 250px"></div>
-                                <div class="col-8">
-                                    <p>Ảnh rõ mặt chính diện là một cách quan trọng để chủ nhà và khách biết thêm về
-                                        nhau. Rõ ràng là cho một cái cây thuê nhà không vui lắm rồi. Xin hãy đăng ảnh rõ
-                                        mặt của bạn. </p>
-                                    <form style="margin-top: 25px">
-                                        <div class="form-group">
-                                            <label for="exampleFormControlFile1" style="color: black">Đăng tệp lên từ máy tính của bạn</label>
-                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                        </div>
-                                    </form>
-
-                                </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <!--end-profile_img-->
-
-                        <div class="tab-pane fade" id="v-pills-verifying" role="tabpanel"
-                             aria-labelledby="v-pills-verifying-tab">3
-                        </div>
-                        <div class="tab-pane fade" id="v-pills-payment" role="tabpanel"
-                             aria-labelledby="v-pills-payment-tab">.6.
-                        </div>
-                        <div class="tab-pane fade" id="v-pills-inbox" role="tabpanel"
-                             aria-labelledby="v-pills-inbox-tab">.5.
-                        </div>
-                        <!--security-->
-                        <div class="tab-pane fade" id="v-pills-security" role="tabpanel"
-                             aria-labelledby="v-pills-security-tab">
-                            <h3 style="margin-bottom: 20px; color: black"> Thây đổi mật khẩu của bạn </h3>
-                            <div class="row" style="margin-top: 5px">
-                                <div class="col-3">
-                                    <p>Mật khẩu hiện tại *:</p>
-                                </div>
-                                <div class="col-6">
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                            <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
-                                            <small id="passwordHelpInline" class="text-muted">
-                                                Must be 8-20 characters long.
-                                            </small>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="col-3">
-                                    <!--#-->
-                                </div>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col-2">
+                                Email *:
                             </div>
-                            <div class="row" style="margin-top: 5px">
-                                <div class="col-3">
-                                    <p>Mật khẩu mới*:</p>
-                                </div>
-                                <div class="col-6">
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                            <input type="password" id="inputPassword7" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
-                                            <small id="passwordHelpInline1" class="text-muted">
-                                                Must be 8-20 characters long.
-                                            </small>
+                            <div class="col-10">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <input type="email" class="form-control" id="inputEmail4"
+                                                   placeholder="Email">
                                         </div>
-                                    </form>
-                                </div>
-                                <div class="col-3">
-                                    <!--#-->
-                                </div>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="row" style="margin-top: 5px">
-                                <div class="col-3">
-                                    <p>Nhập lại mật khẩu mới *:</p>
-                                </div>
-                                <div class="col-6">
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                            <input type="password" id="inputPassword8" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
-                                            <small id="passwordHelpInline2" class="text-muted">
-                                                Must be 8-20 characters long.
-                                            </small>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="col-3">
-                                    <!--#-->
-                                </div>
-
-                            </div>
-                            <button type="button" class="btn btn-danger" style="margin-left: 250px; margin-top: 20px">Cập nhật mật khẩu </button>
-
                         </div>
-                        <!--end_security-->
-                        <div class="tab-pane fade" id="v-pills-logout" role="tabpanel"
-                             aria-labelledby="v-pills-logout-tab">
-                            <h3 style="margin-bottom: 20px; color: black">#</h3>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col-2">
+                                Ngày sinh *:
+                            </div>
+                            <div class="col-10">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <select class="form-control">
+                                                <option selected>Ngày</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                                <option>17</option>
+                                                <option>18</option>
+                                                <option>19</option>
+                                                <option>20</option>
+                                                <option>21</option>
+                                                <option>22</option>
+                                                <option>23</option>
+                                                <option>24</option>
+                                                <option>25</option>
+                                                <option>26</option>
+                                                <option>27</option>
+                                                <option>28</option>
+                                                <option>29</option>
+                                                <option>30</option>
+                                                <option>31</option>
+                                            </select>
+                                        </div>
+                                        <div class="col">
+                                            <select class="form-control">
+                                                <option selected>Tháng</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                            </select>
+                                        </div>
+                                        <div class="col">
+                                            <select class="form-control">
+                                                <option selected>Năm</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col-2">
+                                Số điện thoại *:
+                            </div>
+                            <div class="col-10">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <input type="phone" class="form-control"
+                                                   placeholder="+84">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col-2">
+                                Bạn sống ở đau*:
+                            </div>
+                            <div class="col-10">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <input class="form-control">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col-2">
+                                CMND, Hộ chiếu
+                                <br>
+                                Giấy tờ tùy thân*:
+                            </div>
+                            <div class="col-10">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <input placeholder="Vui lòng nhập mã CMND hoặc hộ chiếu của bạn"
+                                                   class="form-control">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="margin-left: 150px; margin-top: 25px">
+                            Lưu
+                        </button>
+                    </div>
+                    <!--end-profile-->
 
+                    <!--profile_img-->
+                    <div class="tab-pane fade" id="v-pills-profile_img" role="tabpanel"
+                         aria-labelledby="v-pills-profile_img-tab">
+                        <h3 style="margin-bottom: 20px; color: black"> Ảnh đại diện </h3>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-12 col-lg-6">
+                                <img src="https://coinvn247.com/wp-content/uploads/2019/01/coinvn247logo.png"
+                                     style="height: 250px; width: 250px"></div>
+                            <div class="col-md-8 col-sm-6 col-xs-12 col-lg-6">
+                                <p>Ảnh rõ mặt chính diện là một cách quan trọng để chủ nhà và khách biết thêm về
+                                    nhau. Rõ ràng là cho một cái cây thuê nhà không vui lắm rồi. Xin hãy đăng ảnh rõ
+                                    mặt của bạn. </p>
+                                <form style="margin-top: 25px">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1" style="color: black">Đăng tệp lên từ
+                                            máy tính của bạn</label>
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    </div>
+                                </form>
+
+                            </div>
                         </div>
                     </div>
-                    <!---end tab_profile-->
+                    <!--end-profile_img-->
+                    <div class="tab-pane fade" id="v-pills-verifying" role="tabpanel"
+                         aria-labelledby="v-pills-verifying-tab">3
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-payment" role="tabpanel"
+                         aria-labelledby="v-pills-payment-tab">.6.
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-inbox" role="tabpanel"
+                         aria-labelledby="v-pills-inbox-tab">.5.
+                    </div>
+                    <!--security-->
+                    <div class="tab-pane fade" id="v-pills-security" role="tabpanel"
+                         aria-labelledby="v-pills-security-tab">
+                        <h3 style="margin-bottom: 20px; color: black"> Thây đổi mật khẩu của bạn </h3>
+                        <div class="row" style="margin-top: 5px">
+                            <div class="col-md-3 col-sm-4 col-xs-12">
+                                <p>Mật khẩu hiện tại *:</p>
+                            </div>
+                            <div class="col-md-6 col-sm-4 col-xs-12">
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <input type="password" id="inputPassword6" class="form-control mx-sm-3"
+                                               aria-describedby="passwordHelpInline">
+                                        <small id="passwordHelpInline" class="text-muted">
+                                            Must be 8-20 characters long.
+                                        </small>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-12">
+                                <!--#-->
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 5px">
+                            <div class="col-md-3 col-sm-4 col-xs-12">
+                                <p>Mật khẩu mới*:</p>
+                            </div>
+                            <div class="col-md-6 col-sm-4 col-xs-12">
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <input type="password" id="inputPassword7" class="form-control mx-sm-3"
+                                               aria-describedby="passwordHelpInline">
+                                        <small id="passwordHelpInline1" class="text-muted">
+                                            Must be 8-20 characters long.
+                                        </small>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-12">
+                                <!--#-->
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 5px">
+                            <div class="col-md-3 col-sm-4 col-xs-12">
+                                <p>Nhập lại mật khẩu mới *:</p>
+                            </div>
+                            <div class="col-md-6 col-sm-4 col-xs-12">
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <input type="password" id="inputPassword8" class="form-control mx-sm-3"
+                                               aria-describedby="passwordHelpInline">
+                                        <small id="passwordHelpInline2" class="text-muted">
+                                            Must be 8-20 characters long.
+                                        </small>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-12">
+                                <!--#-->
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 5px">
+                            <div class="col-md-3 col-sm-4 col-xs-12">
+                                <!--#-->
+                            </div>
+                            <div class="col-md-6 col-sm-4 col-xs-12">
+                                <button type="button" class="btn btn-danger" style="margin-top: 20px">
+                                    Cập nhật mật khẩu
+                                </button>
 
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-12">
+                                <!--#-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--end_security-->
+                    <!--logout-->
+                    <div class="tab-pane fade" id="v-pills-logout" role="tabpanel"
+                         aria-labelledby="v-pills-logout-tab">
+                        <h3 style="margin-bottom: 20px; color: black">#</h3>
 
+                    </div>
+                    <!--end_logout-->
                 </div>
+
             </div>
         </div>
-        <div class="col-2">
-            <!--#-->
-        </div>
-
     </div>
 </div>
 
-
-<!---@end profile--->
+<!---end_profile--->
 
 
 <!-- Footer -->
 <div>
-    <footer class="page-footer font-small unique-color-dark">
+    <footer class="page-footer font-small unique-color-dark" style="margin-top: 100px">
 
         <div style="background-color: #6351ce;">
             <div class="container">
@@ -560,7 +533,6 @@
     </footer>
 </div>
 <!-- Footer -->
-
-
 </body>
 </html>
+
