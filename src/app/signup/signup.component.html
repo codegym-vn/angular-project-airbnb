@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="col-12">
+        <h2>Tạo tài khoản mới</h2>
+        <form class="was-validated" (ngSubmit)="onSignup(f)" #f="ngForm">
+            <div class="form-group">
+                <label for="name">Tên</label>
+                <input type="text" class="form-control" id="name" placeholder="Name" name='name' ngModel required>
+            </div>
+            <div class="was-validated">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" class="form-control" placeholder="Password"
+                       name='password' ngModel required minlength="3">
+            </div>
+            <div class="was-validated">
+                <label for="email">Email</label>
+                <input type="email" class="form-control " id="email" placeholder="Email" name='email' ngModel required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Số điện thoại</label>
+                <input type="text" class="form-control" id="phone" placeholder="Phone" name='phone' ngModel required>
+            </div>
+            <div class="form-group">
+                <label for="address">Địa chỉ</label>
+                <input type="text" class="form-control" id="address" placeholder="Address" name='address' ngModel
+                       required>
+            </div>
+            <div>
+                <button [disabled]="!f.valid" type="submit" class="btn btn-primary">Tạo</button>
+                <button [routerLink]="['/house']" class="btn btn-secondary">Quay lại</button>
+            </div>
+        </form>
+    </div>
+</div>
