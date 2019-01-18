@@ -17,6 +17,7 @@ export class ViewDetailComponent implements OnInit {
     addOrderForm: FormGroup;
     checkIn: string;
     checkOut: string;
+    date: number;
     totalPrice: number;
 
     constructor(private houseService: HouseService,
@@ -51,7 +52,7 @@ export class ViewDetailComponent implements OnInit {
     }
 
     getTotalPrice() {
-        this.totalPrice = this.orderService.getDiffToDate(this.checkIn, this.checkOut);
+        this.date = this.orderService.getDiffToDate(this.checkIn, this.checkOut);
     }
 
 

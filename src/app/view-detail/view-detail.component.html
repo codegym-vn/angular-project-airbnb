@@ -122,10 +122,10 @@
                                     <input type="hidden" name="house_id" formControlName="house_id"
                                            [(ngModel)]="house.id">
                                 </div>
-                                <div *ngIf="totalPrice;else total_price">
+                                <div *ngIf="date; else total_price">
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item">
-                                            Tổng: {{(totalPrice * house?.price).toLocaleString()}} VND
+                                            Tổng: {{(date * house?.price).toLocaleString()}} VND
                                         </li>
                                     </ul>
                                 </div>
@@ -136,9 +136,9 @@
                                         </li>
                                     </ul>
                                 </ng-template>
+                                <input type="hidden" name="totalPrice" formControlName="totalPrice"
+                                       [(ngModel)]="date * house.price">
 
-                                <!--<input type="hidden" name="totalPrice" formControlName="totalPrice"-->
-                                <!--[(ngModel)]="totalPrice * house.price">-->
                                 <div style="margin-left: 120px; margin-top: 20px; margin-bottom: 20px">
                                     <button type="submit" class="btn btn-danger">Đặt ngay</button>
                                 </div>
