@@ -15,6 +15,9 @@ export class ViewDetailComponent implements OnInit {
     house: IHouse;
     order: Iorder;
     addOrderForm: FormGroup;
+    checkIn: string;
+    checkOut: string;
+    totalPrice: number;
 
     constructor(private houseService: HouseService,
                 private activeRoute: ActivatedRoute,
@@ -33,6 +36,7 @@ export class ViewDetailComponent implements OnInit {
         this.addOrderForm = this.formBuilder.group({
             checkIn: '',
             checkOut: '',
+            totalPrice: '',
             house_id: '',
         });
     }
@@ -41,13 +45,13 @@ export class ViewDetailComponent implements OnInit {
         const value = this.addOrderForm.value;
         this.orderService.addOrder(value).subscribe(
             data => {
-                // this.order.unshift(order);
                 this.router.navigateByUrl('order');
             }
         );
-        // console.log(this.order.checkIn);
-        // console.log(this.order.checkOut);
-        // console.log(this.order.house_id);
+    }
+
+    getTotalPrice() {
+        this.totalPrice = this.orderService.getDiffToDate(this.checkIn, this.checkOut);
     }
 
 
