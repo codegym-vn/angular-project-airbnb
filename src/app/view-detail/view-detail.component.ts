@@ -15,8 +15,6 @@ export class ViewDetailComponent implements OnInit {
     house: IHouse;
     order: Iorder;
     addOrderForm: FormGroup;
-    checkIn: string;
-    checkOut: string;
     date: number;
     totalPrice: number;
 
@@ -38,11 +36,12 @@ export class ViewDetailComponent implements OnInit {
             checkIn: '',
             checkOut: '',
             totalPrice: '',
-            house_id: '',
+            house_id: id,
         });
     }
 
     onSubmit() {
+        this.addOrderForm.value.totalPrice = this.date * this.house.price;
         const value = this.addOrderForm.value;
         this.orderService.addOrder(value).subscribe(
             data => {
@@ -52,7 +51,7 @@ export class ViewDetailComponent implements OnInit {
     }
 
     getTotalPrice() {
-        this.date = this.orderService.getDiffToDate(this.checkIn, this.checkOut);
+        this.date = this.orderService.getDiffToDate(this.addOrderForm.value.checkIn, this.addOrderForm.value.checkOut);
     }
 
 

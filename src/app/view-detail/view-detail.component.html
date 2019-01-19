@@ -111,16 +111,15 @@
                                         <div class="form-group col-md-6">
                                             <label>NGÀY ĐẾN </label>
                                             <input type="date" class="form-control" name="checkIn"
-                                                   formControlName="checkIn" [(ngModel)]="checkIn">
+                                                   formControlName="checkIn">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label>NGÀY ĐI </label>
                                             <input type="date" class="form-control" name="checkOut"
-                                                   formControlName="checkOut" [(ngModel)]="checkOut">
+                                                   formControlName="checkOut">
                                         </div>
                                     </div>
-                                    <input type="hidden" name="house_id" formControlName="house_id"
-                                           [(ngModel)]="house.id">
+                                    <input type="hidden" name="house_id" formControlName="house_id">
                                 </div>
                                 <div *ngIf="date; else total_price">
                                     <ul class="list-group list-group-flush">
@@ -136,8 +135,8 @@
                                         </li>
                                     </ul>
                                 </ng-template>
-                                <input type="hidden" name="totalPrice" formControlName="totalPrice"
-                                       [(ngModel)]="date * house.price">
+                                <!--<input type="hidden" name="totalPrice" formControlName="totalPrice"-->
+                                <!--[(ngModel)]="date * house.price">-->
 
                                 <div style="margin-left: 120px; margin-top: 20px; margin-bottom: 20px">
                                     <button type="submit" class="btn btn-danger">Đặt ngay</button>
