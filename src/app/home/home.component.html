@@ -65,8 +65,43 @@
         </a>
     </div>
 </div>
-<!--end/slider-->
-
+<!--search-->
+<div class="container-fluid sticky-top" style="background-color: #ffff; margin-top: 5px">
+    <div class="row">
+        <div class="col-md-1 col-sm-4 col-xs-12">
+            <!--#-->
+        </div>
+        <div class="col-md-10 col-sm-4 col-xs-12">
+            <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+                <a class="navbar-brand"><!--#--></a>
+                <div class="form-group mb-2">
+                    <input type="text" readonly class="form-control-plaintext" value="Tìm kiếm theo giá tiền ">
+                </div>
+                <form (ngSubmit)="searchHouse()" [formGroup]="searchForm">
+                    <div class="form-row align-items-center">
+                        <div class="col-auto my-1">
+                            <select class="custom-select mr-sm-2"
+                                    name="keyword" formControlName="keyword" [(ngModel)]="keyword">
+                                <option selected>Tìm theo giá tiền</option>
+                                <option value="1">Từ 5 trăm - 1 triệu</option>
+                                <option value="2">Từ 1 triệu - 1.5 triệu</option>
+                                <option value="3">Từ 1.5 triệu - 2 triệu</option>
+                                <option value="4">Từ 2 triệu - 2.5 triệu</option>
+                            </select>
+                        </div>
+                        <div class="col-auto my-1">
+                            <button type="submit" class="btn btn-danger">Tìm kiếm </button>
+                        </div>
+                    </div>
+                </form>
+            </nav>
+        </div>
+        <div class="col-md-1 col-sm-4 col-xs-12">
+            <!--#-->
+        </div>
+    </div>
+</div>
+<!--end_search-->
 
 
 <!--row-->
@@ -82,30 +117,6 @@
                     <!--row1-->
                     <div class="col-md-3 col-sm-6 col-xs-12" style="margin-top: 30px">
                         <div class="column2">
-                            <!--search-->
-                            <div class="card text-white bg-warning mb-3">
-                                <div class="card-header" style="color: red">
-                                    <h3>Tìm kiếm </h3>
-                                </div>
-                                <div class="form-row" style="margin-top: 15px;margin-right: 10px;margin-left: 10px">
-                                    <div>
-                                        <form (ngSubmit)="searchHouse()" [formGroup]="searchForm">
-                                            <label style="margin-left: 10px; margin-top: 10px">Giá tiền</label>
-                                            <select class="form-control form-control-auto" style="margin-bottom: 10px"
-                                                    name="keyword" formControlName="keyword" [(ngModel)]="keyword">
-                                                <option value="1">Từ 5 trăm - 1 triệu</option>
-                                                <option value="2">Từ 1 triệu - 1.5 triệu</option>
-                                                <option value="3">Từ 1.5 triệu - 2 triệu</option>
-                                                <option value="4">Từ 2 triệu - 2.5 triệu</option>
-                                            </select>
-
-                                        </form>
-                                    </div>
-                                </div>
-
-                                <input class="btn btn-primary" type="submit" value="Tìm kiếm ">
-                            </div>
-                            <!--end_search-->
 
                             <!--follow-->
                             <div class="p-3 mb-2 bg-info text-white">
@@ -240,13 +251,16 @@
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="https://cdn.luxstay.com/home/event/event_13_1547009294.jpg" alt="First slide">
+                        <img class="d-block w-100" src="https://cdn.luxstay.com/home/event/event_13_1547009294.jpg"
+                             alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="https://cdn.luxstay.com/home/event/event_1_1547106326.jpg" alt="Second slide">
+                        <img class="d-block w-100" src="https://cdn.luxstay.com/home/event/event_1_1547106326.jpg"
+                             alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="https://cdn.luxstay.com/home/event/event_13_1547009294.jpg" alt="Third slide">
+                        <img class="d-block w-100" src="https://cdn.luxstay.com/home/event/event_13_1547009294.jpg"
+                             alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
