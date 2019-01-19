@@ -23,4 +23,8 @@ export class HouseService {
     searchHouse(keyword): Observable<IHouse[]> {
         return this.http.get<IHouse[]>(`${this.API_URL}/search/${keyword}`);
     }
+
+    getKeywordSearch(keyword: string): string {
+        return keyword;
+    }
 }
