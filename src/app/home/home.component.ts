@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {IHouse} from '../ihouse';
 import {HouseService} from '../house.service';
 import {FormBuilder, FormGroup} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-customer',
@@ -13,7 +14,8 @@ export class HomeComponent implements OnInit {
     searchForm: FormGroup;
     keyword: string;
     constructor(private houseService: HouseService,
-                private formBuilder: FormBuilder) {
+                private formBuilder: FormBuilder,
+                private router: Router) {
     }
 
     ngOnInit() {
@@ -35,6 +37,7 @@ export class HomeComponent implements OnInit {
         this.houseService.searchHouse(this.keyword).subscribe(
             data => {
                 this.houses = data;
+                this.router.navigateByUrl('search');
             }
         );
     }
