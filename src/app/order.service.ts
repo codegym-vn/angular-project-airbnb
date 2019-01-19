@@ -10,6 +10,7 @@ import {differenceInDays} from 'date-fns';
 export class OrderService {
     private readonly API_URL = 'http://127.0.0.1:8000/api/order';
     diffDate: number;
+
     constructor(private http: HttpClient) {
     }
 
@@ -22,6 +23,9 @@ export class OrderService {
         checkOut = new Date(checkOut);
 
         this.diffDate = differenceInDays(checkOut, checkIn);
-        return this.diffDate;
+        if (this.diffDate < 0) {
+            return this.diffDate = 0;
+        }
+        return this.diffDate + 1;
     }
 }
