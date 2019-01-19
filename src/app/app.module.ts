@@ -8,6 +8,7 @@ import { OrderComponent } from './order/order.component';
 import {AppRoutingModule} from './app-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CustomerComponent } from './customer/customer.component';
+import { SearchHouseComponent } from './search-house/search-house.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { CustomerComponent } from './customer/customer.component';
         HomeComponent,
         ViewDetailComponent,
         OrderComponent,
-        CustomerComponent
+        CustomerComponent,
+        SearchHouseComponent
     ],
     imports: [
         BrowserModule,
