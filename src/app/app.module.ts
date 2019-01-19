@@ -9,6 +9,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CustomerComponent} from './customer/customer.component';
 import {SearchHouseComponent} from './search-house/search-house.component';
+import { RegisterComponent } from './customer/register/register.component';
 
 @NgModule({
     declarations: [
@@ -18,6 +19,7 @@ import {SearchHouseComponent} from './search-house/search-house.component';
         OrderComponent,
         CustomerComponent,
         SearchHouseComponent,
+        RegisterComponent,
     ],
     imports: [
         BrowserModule,

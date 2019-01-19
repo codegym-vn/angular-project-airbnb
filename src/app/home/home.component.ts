@@ -35,7 +35,6 @@ export class HomeComponent implements OnInit {
 
     searchHouse() {
         this.keyword = this.searchForm.value.keyword;
-        // this.houseService.searchHouse(this.keyword);
         this.router.navigate(['/search', this.keyword]);
 
     }

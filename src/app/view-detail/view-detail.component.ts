@@ -17,6 +17,7 @@ export class ViewDetailComponent implements OnInit {
     addOrderForm: FormGroup;
     date: number;
     totalPrice: number;
+    message: string;
 
     constructor(private houseService: HouseService,
                 private activeRoute: ActivatedRoute,
@@ -45,7 +46,8 @@ export class ViewDetailComponent implements OnInit {
         const value = this.addOrderForm.value;
         this.orderService.addOrder(value).subscribe(
             data => {
-                this.router.navigateByUrl('order');
+                // this.router.navigate(['order']);
+                this.message = 'Đặt nhà thành công';
             }
         );
     }
