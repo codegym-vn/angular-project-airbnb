@@ -12,6 +12,7 @@ import {Router} from '@angular/router';
 export class HomeComponent implements OnInit {
     houses: IHouse[] = [];
     searchForm: FormGroup;
+    keyword: string;
 
     constructor(private houseService: HouseService,
                 private formBuilder: FormBuilder,
@@ -33,11 +34,9 @@ export class HomeComponent implements OnInit {
     }
 
     searchHouse() {
-        this.houseService.searchHouse(this.searchForm.value.keyword).subscribe(
-            data => {
-                // this.houseService.getKeywordSearch(this.searchForm.value.keyword);
-                this.router.navigate(['/search']);
-            }
-        );
+        this.keyword = this.searchForm.value.keyword;
+        // this.houseService.searchHouse(this.keyword);
+        this.router.navigate(['/search', this.keyword]);
+
     }
 }

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HouseService} from '../house.service';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {IHouse} from '../ihouse';
-import {HomeComponent} from '../home/home.component';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
     selector: 'app-search-house',
@@ -12,31 +12,26 @@ import {HomeComponent} from '../home/home.component';
 export class SearchHouseComponent implements OnInit {
     houses: IHouse[] = [];
     searchForm: FormGroup;
-    keyword: string;
 
     constructor(private houseService: HouseService,
                 private formBuilder: FormBuilder,
-                private homeComponent: HomeComponent) {
+                private route: ActivatedRoute) {
     }
 
     ngOnInit() {
-        this.searchHouse();
-        this.getHouses();
+        const keyword = this.route.snapshot.paramMap.get('keyword');
+        this.houseService.searchHouse(keyword).subscribe(
+            data => {
+                this.houses = data;
+            }
+        );
         this.searchForm = this.formBuilder.group({
             keyword: ''
         });
     }
 
-    getHouses() {
-        return this.houseService.getHouses().subscribe(
-            data => {
-                this.houses = data;
-            });
-    }
-
     searchHouse() {
-        this.keyword = this.homeComponent.getKeywordSearch();
-        this.houseService.searchHouse(this.keyword).subscribe(
+        this.houseService.searchHouse(this.searchForm.value.keyword).subscribe(
             data => {
                 this.houses = data;
             }
