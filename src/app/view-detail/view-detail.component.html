@@ -1,3 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
 <!--nav-bar-->
 <div class="container-fluid">
     <nav class="navbar navbar-light" style="background-color: #ffff; height: 115px">
@@ -23,83 +33,109 @@
     </nav>
 </div>
 <!--end/nav-bar-->
-
-<div class="container-fluid" style="margin-top: 20px; margin-bottom: 35px">
+<div class="container-fluid">
     <div class="row">
-
-        <div class="col-1">
+        <div class="col-md-2 col-sm-4 col-xs-12">
             <!--#-->
         </div>
-        <div class="col-10">
+        <div class="col-md-8 col-sm-4 col-xs-12">
             <div class="row">
-                <div class="col-9" style="margin-top: 20px; margin-bottom: 22px">
+                <div class="col-md-9 col-sm-6 col-xs-12">
                     <div class="row">
-                        <div class="col-4">
-                            <img src="https://q-ec.bstatic.com/images/hotel/max1024x768/194/19450516.jpg"
-                                 style="width: 380px; height: 250px">
+                        <!--img-->
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <div class="card">
+                                <p>
+                                    <img class="card-img-top" src="http://127.0.0.1:8000/storage/{{house?.image[0]}}"
+                                         height="400px"
+                                         width="600px">
+                                </p>
+                            </div>
                         </div>
-                        <div class="col-4">
-                            <img src="https://q-ec.bstatic.com/images/hotel/max1024x768/194/19450516.jpg"
-                                 style="width: 380px; height: 250px">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+
+                            <div class="card">
+                                <img class="card-img-top"
+                                     src="https://cdn.luxstay.com/rooms/13883/large/1533029141_5dec30d681ff60a139ee.jpg"
+                                     alt="Card image cap" style="width: 300px">
+                            </div>
+                            <div class="card" style="margin-top: 5px">
+                                <img class="card-img-top"
+                                     src="https://cdn.luxstay.com/rooms/13883/large/1533029141_5dec30d681ff60a139ee.jpg"
+                                     alt="Card image cap" style="width: 300px">
+                            </div>
                         </div>
-                        <div class="col-4">
-                            <img src="https://q-ec.bstatic.com/images/hotel/max1024x768/194/19450516.jpg"
-                                 style="width: 380px; height: 250px">
-                        </div>
+                        <!--end_img-->
+
                     </div>
+                    <!--profile-->
+                    <div>
+                        <h3 class="title"
+                            style="text-align: center;margin-top: 20px; font-size: 38px">{{house?.title}}</h3>
 
-
-                    <!--#------------------------------------->
-
-
-                    <h3 class="title" style="text-align: center;margin-top: 20px; font-size: 38px">{{house?.title}}</h3>
-
-                    <div class="row">
-                        <div class="col-6">
-                            <h4>Ảnh</h4>
-                            <p>
-                                <img src="http://127.0.0.1:8000/storage/{{house?.image[0]}}" height="400px"
-                                     width="420px">
-                            </p>
-                        </div>
-                        <div class="col-6">
-                            <div style="margin-left: 25px">
+                        <!--<div class="col-6">-->
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                 <h4>Giá</h4>
                                 <p style="color: red">
                                     {{house?.price.toLocaleString() + 'VND ngày/đêm'}}
                                 </p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                 <h4>Trạng thái</h4>
                                 <p>
                                     {{house?.status}}
                                 </p>
-                                <h4>Địa chỉ</h4>
-                                <p>
-                                    {{house?.address}}
-                                </p>
-                            </div>
-                            <div id="map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9265632499687!2d105.76612145093053!3d21.035624192850133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b9444c676b%3A0xe713200541b7456d!2sCodeGym!5e0!3m2!1svi!2s!4v1547546252956"
-                                        width="540" height="200" frameborder="0" style="border:0"
-                                        allowfullscreen></iframe>
                             </div>
                         </div>
-                        <div class="box-Highlights">
+                        <div>
+                            <h4>Địa chỉ</h4>
+                            <p>
+                                {{house?.address}}
+                            </p>
+                        </div>
+
+                        <div class="box-Highlights" style="margin-bottom: 20px">
                             <div class="tlt"><h4>Điểm nổi bật của chỗ ở</h4></div>
                             <div class="box-txt"><p>{{house?.description}}</p></div>
                         </div>
+
                     </div>
 
-                    <!--#------------------------------------->
+                    <!--end_profile-->
+                    <h3> Chi tiết khác </h3>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">Nhân phòng</th>
+                            <th scope="col">2:00</th>
+
+                        </tr>
+                        </thead>
+                        <thead>
+                        <tr>
+                            <th scope="col">Trả phòng</th>
+                            <th scope="col">12:00</th>
+
+                        </tr>
+                        </thead>
+                        <thead>
+                        <tr>
+                            <p>Nếu quý khách có nhu cầu về giờ nhận và trả phòng khác với quy định chung của CodeGym,
+                                quý khách vui lòng liên hệ số điện thoại 0983692323 (miễn phí) để được hỗ trợ tốt
+                                nhất</p>
+
+                        </tr>
+                        </thead>
+
+
+                    </table>
+
                 </div>
 
-                <!--row2-->
-                <div class="col-3" style="margin-top: 20px; margin-bottom: 20px">
-                    <!--<div>-->
-                    <!--<div class="p-3 mb-2 bg-light text-dark" style="margin-top: 10px">-->
-                    <!--Bạn thích chỗ nghỉ này, nhưng vẫn chưa chắc chắn?-->
-                    <!--<button type="button" class="btn btn-primary btn-lg btn-block">Xem các nhà tương tự</button>-->
-                    <!--</div>-->
-                    <!--</div>-->
+
+                <!--tab-booking-->
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="card sticky-top">
                         <div class="card-header">
                             {{house?.price.toLocaleString() + 'VND ngày/đêm'}}
@@ -138,7 +174,7 @@
                                 <!--<input type="hidden" name="totalPrice" formControlName="totalPrice"-->
                                 <!--[(ngModel)]="date * house.price">-->
 
-                                <div style="margin-left: 120px; margin-top: 20px; margin-bottom: 20px">
+                                <div style="margin-left: 70px; margin-top: 20px; margin-bottom: 20px">
                                     <button type="submit" class="btn btn-danger">Đặt ngay</button>
                                 </div>
                                 <p class="m-0"><i class="iconroom-phone-line" aria-hidden="true"></i> Gọi <a
@@ -153,32 +189,21 @@
                         </div>
 
                     </div>
-                    <!--<div class="p-3 mb-2 bg-info text-white" style="margin-top: 10px">-->
-                    <!--<h4>Đăng ký nhận tin khuyến mãi từ HomeCodeGym </h4>-->
-                    <!--<p>Đăng ký để nhận ưu đãi qua email, với mức giảm giá đến 70%.</p>-->
-                    <!--<div class="form-group">-->
-                    <!--<input type="email" class="form-control"-->
-                    <!--placeholder="name@example.com">-->
-                    <!--</div>-->
-                    <!--<button type="button" class="btn btn-light" style="margin-left: 110px">Đăng ký</button>-->
-                    <!--</div>-->
-
                 </div>
-                <!--row2-->
-                <div class="col-1">
-                    <!--#-->
-                </div>
-
-
+                <!--end_tab-booking-->
             </div>
+
         </div>
-
+        <div class="col-md-2 col-sm-4 col-xs-12">
+            <!--#-->
+        </div>
     </div>
-
 </div>
+
 <!-- Footer -->
 <div>
-    <footer class="page-footer font-small unique-color-dark">
+    <footer class="page-footer font-small unique-color-dark" style="margin-top: 20px">
+
         <div style="background-color: #6351ce;">
             <div class="container">
 
@@ -204,77 +229,93 @@
                     </div>
                 </div>
             </div>
+            <!-- Grid column -->
         </div>
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-1">
-                    <!--1-->
+                <div class="section col-md-4">
+                    <a class="td-header-logo td-sticky-disable" href="https://coinvn247.com/">
+                        <img class="td-retina-data"
+
+                             src="https://coinvn247.com/wp-content/uploads/2019/01/homecodegum.png"
+                             height="150px"
+                             width="265px" alt="">
+                    </a>
                 </div>
-                <div class="col-10">
-                    <div class="row" style="margin-top: 30px">
-                        <div class="col-3">
-                            <div class="section col-md-4">
-                                <a [routerLink]="['/house']">
-                                    <img src="https://coinvn247.com/wp-content/uploads/2019/01/codegym.png"
-                                         alt="HomeCodeGym"
-                                         class="img-responsive" width="265px" height="150px"></a>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <h6 class="text-uppercase font-weight-bold">Hỗ trợ</h6>
-                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                            <p>
-                                <a href="#!">Câu hỏi thường </a>
-                            </p>
-                            <p>
-                                <a href="#!">Chính sách hủy</a>
-                            </p>
-                            <p>
-                                <a href="#!">Hướng dẫn đặt phòng</a>
-                            </p>
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Hỗ trợ</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Câu hỏi thường </a>
+                    </p>
+                    <p>
+                        <a href="#!">Chính sách hủy</a>
+                    </p>
+                    <p>
+                        <a href="#!">Hướng dẫn đặt phòng</a>
+                    </p>
 
-                        </div>
-                        <div class="col-3">
-                            <h6 class="text-uppercase font-weight-bold">Cẩm nang du lịch </h6>
-                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                            <p>
-                                <a href="#!">Đà Lạt </a>
-                            </p>
-                            <p>
-                                <a href="#!">Đà Nẵng </a>
-                            </p>
-                            <p>
-                                <a href="#!">SaPa </a>
-                            </p>
-
-                        </div>
-                        <div class="col-3">
-                            <h6 class="text-uppercase font-weight-bold">Contact</h6>
-                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                            <p>
-                                <i class="fas fa-home mr-3"></i> CodeGym, My Dinh, Ha Noi </p>
-                            <p>
-                                <i class="fas fa-envelope mr-3"></i> codegym@gmail.com</p>
-                            <p>
-                                <i class="fas fa-phone mr-3"></i> + 08 234 567 88</p>
-                            <p>
-                                <i class="fas fa-print mr-3"></i> + 08 234 567 89</p>
-
-                        </div>
-
-                    </div>
-                    <div class="col-1">
-                        <!--1-->
-                    </div>
                 </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Cẩm nang du lịch </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Đà Lạt </a>
+                    </p>
+                    <p>
+                        <a href="#!">Đà Nẵng </a>
+                    </p>
+                    <p>
+                        <a href="#!">SaPa </a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fas fa-home mr-3"></i> CodeGym, My Dinh, Ha Noi </p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> codegym@gmail.com</p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> + 08 234 567 88</p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> + 08 234 567 89</p>
+
+                </div>
+
+                <!-- Grid column -->
+
             </div>
+            <!-- Grid row -->
+
         </div>
+        <!-- Footer Links -->
+
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2019 Copyright:
             <a href="#!">Bản quyền thuộc về Team CC </a>
         </div>
         <!-- Copyright -->
+
     </footer>
 </div>
-<!--footer-->
+<!-- Footer -->
+
+</body>
+</html>
