@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CustomerService} from '../../customer.service';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -14,17 +14,16 @@ export class RegisterComponent implements OnInit {
 
     constructor(private customerService: CustomerService,
                 private formBuilder: FormBuilder,
-                private route: ActivatedRoute,
                 private router: Router) {
     }
 
     ngOnInit() {
         this.registerForm = this.formBuilder.group({
-            name: '',
-            email: '',
-            password: '',
-            phone: '',
-            address: ''
+            name: ['', [Validators.required]],
+            email: ['', [Validators.required, Validators.email]],
+            password: ['', [Validators.required, Validators.minLength(6)]],
+            phone: ['', [Validators.required]],
+            address: ['', [Validators.required]]
         });
     }
 
