@@ -1,7 +1,8 @@
 export interface IHouse {
     id: number;
     title: string;
-    content: string;
+    quantityOfBedroom: number;
+    quantityOfBathroom: number;
     description: string;
     status: string;
     price: number;

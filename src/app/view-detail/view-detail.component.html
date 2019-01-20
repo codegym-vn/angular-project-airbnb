@@ -26,7 +26,7 @@
                     <a class="dropdown-item" href="#">Đăng ký </a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Cập nhật tài khoản </a>
-                    <a class="dropdown-item" href="#">Thây đổi mật khẩu </a>
+                    <a class="dropdown-item" href="#">Thay đổi mật khẩu </a>
                 </div>
             </li>
         </ul>
@@ -53,15 +53,14 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
-
                             <div class="card">
                                 <img class="card-img-top"
-                                     src="https://cdn.luxstay.com/rooms/13883/large/1533029141_5dec30d681ff60a139ee.jpg"
+                                     src="http://127.0.0.1:8000/storage/{{house?.image[1]}}"
                                      alt="Card image cap" style="width: 300px">
                             </div>
                             <div class="card" style="margin-top: 5px">
                                 <img class="card-img-top"
-                                     src="https://cdn.luxstay.com/rooms/13883/large/1533029141_5dec30d681ff60a139ee.jpg"
+                                     src="http://127.0.0.1:8000/storage/{{house?.image[2]}}"
                                      alt="Card image cap" style="width: 300px">
                             </div>
                         </div>
@@ -78,13 +77,27 @@
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <h4>Giá</h4>
                                 <p style="color: red">
-                                    {{house?.price.toLocaleString() + 'VND ngày/đêm'}}
+                                    {{house?.price.toLocaleString('vi') + 'VND ngày/đêm'}}
                                 </p>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <h4>Trạng thái</h4>
                                 <p>
                                     {{house?.status}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <h4>Số lượng phòng ngủ</h4>
+                                <p>
+                                    {{house?.quantityOfBedroom + ' phòng'}}
+                                </p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <h4>Số lượng phòng tắm</h4>
+                                <p>
+                                    {{house?.quantityOfBathroom + ' phòng'}}
                                 </p>
                             </div>
                         </div>
@@ -107,7 +120,7 @@
                     <table class="table table-striped">
                         <thead>
                         <tr>
-                            <th scope="col">Nhân phòng</th>
+                            <th scope="col">Nhận phòng</th>
                             <th scope="col">2:00</th>
 
                         </tr>
@@ -171,9 +184,9 @@
                                         </li>
                                     </ul>
                                 </ng-template>
-                                <!--<input type="hidden" name="totalPrice" formControlName="totalPrice"-->
-                                <!--[(ngModel)]="date * house.price">-->
-
+                                <div *ngIf="message">
+                                    <p style="background-color: aquamarine">{{message}}</p>
+                                </div>
                                 <div style="margin-left: 70px; margin-top: 20px; margin-bottom: 20px">
                                     <button type="submit" class="btn btn-danger">Đặt ngay</button>
                                 </div>

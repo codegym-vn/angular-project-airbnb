@@ -18,7 +18,7 @@ export class OrderService {
         return this.http.post<Iorder>(this.API_URL, order);
     }
 
-    getDiffToDate(checkIn, checkOut: string | number | Date): number {
+    getDiffToDate(checkIn, checkOut: Date): number {
         checkIn = new Date(checkIn);
         checkOut = new Date(checkOut);
 
