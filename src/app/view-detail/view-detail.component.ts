@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {IHouse} from '../ihouse';
 import {HouseService} from '../house.service';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Iorder} from '../iorder';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {OrderService} from '../order.service';
 
@@ -13,7 +12,6 @@ import {OrderService} from '../order.service';
 })
 export class ViewDetailComponent implements OnInit {
     house: IHouse;
-    order: Iorder;
     addOrderForm: FormGroup;
     date: number;
     totalPrice: number;

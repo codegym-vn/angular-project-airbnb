@@ -3,6 +3,5 @@ export interface Iorder {
     checkIn: string;
     checkOut: string;
     totalPrice: number;
-    customer_id: number;
     house_id: number;
 }
