@@ -118,6 +118,9 @@
                                                    formControlName="address">
                                         </div>
                                     </div>
+                                    <div *ngIf="message">
+                                        <p style="background-color: aquamarine">{{message}}</p>
+                                    </div>
                                     <button type=submit class="btn btn-success center-block" style="float: right">Đăng ký</button>
                                 </form>
                             </div>
