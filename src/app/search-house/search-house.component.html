@@ -30,7 +30,9 @@
       <nav class="navbar navbar-light" style="background-color: #EFFBFB;">
         <a class="navbar-brand"></a>
         <div class="form-group mb-2">
-          <input type="text" readonly class="form-control-plaintext" value="Tìm kiếm theo giá tiền ">
+          <div *ngIf="houses">
+            <p>Tìm được {{houses.length}} kết quả</p>
+          </div>
         </div>
         <form (ngSubmit)="searchHouse()" [formGroup]="searchForm">
           <div class="form-row align-items-center">
