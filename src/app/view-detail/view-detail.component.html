@@ -187,7 +187,7 @@
                                     <p style="background-color: aquamarine">{{message}}</p>
                                 </div>
                                 <div style="margin-left: 70px; margin-top: 20px; margin-bottom: 20px">
-                                    <button type="submit" class="btn btn-danger">Đặt ngay</button>
+                                    <button type="submit" [disabled]="!date" class="btn btn-danger">Đặt ngay</button>
                                 </div>
                                 <p class="m-0"><i class="iconroom-phone-line" aria-hidden="true"></i> Gọi <a
                                         href="tel:0983692323"><b>0983692323</b></a>
