@@ -12,6 +12,7 @@ import {ActivatedRoute} from '@angular/router';
 export class SearchHouseComponent implements OnInit {
     houses: IHouse[] = [];
     searchForm: FormGroup;
+    keyword: string;
 
     constructor(private houseService: HouseService,
                 private formBuilder: FormBuilder,
@@ -19,8 +20,8 @@ export class SearchHouseComponent implements OnInit {
     }
 
     ngOnInit() {
-        const keyword = this.route.snapshot.paramMap.get('keyword');
-        this.houseService.searchHouse(keyword).subscribe(
+        this.keyword = this.route.snapshot.paramMap.get('keyword');
+        this.houseService.searchHouse(this.keyword).subscribe(
             data => {
                 this.houses = data;
             }
@@ -31,7 +32,8 @@ export class SearchHouseComponent implements OnInit {
     }
 
     searchHouse() {
-        this.houseService.searchHouse(this.searchForm.value.keyword).subscribe(
+        this.keyword = this.searchForm.value.keyword;
+        this.houseService.searchHouse(this.keyword).subscribe(
             data => {
                 this.houses = data;
             }
