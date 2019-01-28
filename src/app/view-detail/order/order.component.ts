@@ -32,7 +32,7 @@ export class OrderComponent implements OnInit {
     const value = this.orderForm.value;
     this.orderService.addOrder(value).subscribe(
         data => {
-          // this.router.navigate(['order']);
+          this.orderForm.reset();
           this.message = 'Đặt nhà thành công';
         }
     );
