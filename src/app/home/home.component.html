@@ -24,87 +24,53 @@
         </div>
     </div>
     <!-- /first section -->
-
-    <div class="search-T" style="margin-bottom: 20px">
-        <div class="tcl">
+<!--search-->
+    <div class="search-T sticky-top">
+        <div class="tcl" style="margin-top: 10px">
             <div class="row">
-                <div class="col"></div>
-                <div class="col-8">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
                     <div class="row">
-                        <div class="col-4">s</div>
-                        <div class="col"><input type="date" class="form-control" id="checkin"></div>
-                        <div class="col"><input type="date" class="form-control" id="checkout"
-                        ></div>
-                        <div class="col">s</div>
-
-                        <div class="col">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col"></div>
-            </div>
-        </div>
-        <div class="box-txt"><p>a</p></div>
-    </div>
-    search
-
-    <div class="search sticky-top" style=" margin-top: 10px">
-        <div class="row">
-            <div class="col-md-2 col-sm-4 col-xs-12">
-            </div>
-            <div class="col-md-9 col-sm-4 col-xs-12">
-                <div class="row">
-                    <div class="col">
-                        <div>
+                        <div class="col-md-4">
                             <input type="text" class="form-control" placeholder="Nhập tên thành phố hoặc Homestay">
-                        </div>
-                    </div>
 
-                    <div class="col">
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group mb-2">
-                                    <input type="date" class="form-control" placeholder="Last name">
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-group mb-2">
-                                    <input type="date" class="form-control" placeholder="Last name">
-                                </div>
-                            </div>
                         </div>
-                    </div>
+                        <div class="col-md-4">
+                            <form class="form-row">
+                                <div class="col-md-6 col-sm-6 col-xs-12"><input type="date" class="form-control" id="checkin"></div>
+                                <div class="col-md-6 col-sm-6 col-xs-12"><input type="date" class="form-control" id="checkout"></div>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <form (ngSubmit)="searchHouse()" [formGroup]="searchForm">
+                                <div class="form-row align-items-center">
+                                    <div class="col-auto my-1">
+                                        <select class="custom-select mr-sm-2"
+                                                name="keyword" formControlName="keyword" [value]="1">
+                                            <option value="1">Từ 5 trăm - 1 triệu</option>
+                                            <option value="2">Từ 1 triệu - 1.5 triệu</option>
+                                            <option value="3">Từ 1.5 triệu - 2 triệu</option>
+                                            <option value="4">Từ 2 triệu - 2.5 triệu</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-auto my-1">
+                                        <button type="button" class="btn btn-danger">Tìm kiếm </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
 
-                    <div class="col">
-                        <form (ngSubmit)="searchHouse()" [formGroup]="searchForm">
-                            <div class="form-row align-items-center">
-                                <div class="col-auto my-1">
-                                    <select class="custom-select mr-sm-2"
-                                            name="keyword" formControlName="keyword" [value]="1">
-                                        <option value="1">Từ 5 trăm - 1 triệu</option>
-                                        <option value="2">Từ 1 triệu - 1.5 triệu</option>
-                                        <option value="3">Từ 1.5 triệu - 2 triệu</option>
-                                        <option value="4">Từ 2 triệu - 2.5 triệu</option>
-                                    </select>
-                                </div>
-                                <div class="col-auto my-1">
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><span><i
-                                            class="fas fa-search"></i></span></button>
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-1 col-sm-4 col-xs-12">
+                <div class="col-md-2"></div>
             </div>
         </div>
+        <div class="box-txt"><p>
+            <!--#-->
+        </p></div>
     </div>
+    <!--/search-->
 
-    end_search
-
-    /first section
     <div class="c" style=" margin-bottom: 50px;">
         <div class="row">
             <div class="col-md-1 col-sm-4 col-xs-12">

@@ -239,8 +239,8 @@
     border-radius: 4px;
     background-color: #fffbfa;
     border: 1px solid #f4511e;
-    margin-top: 24px;
-    padding: 12px 0;
+    /*margin-top: 24px;*/
+    padding: 5px 0;
 }
 
 /*.tcl {*/
@@ -252,27 +252,6 @@
 /*}*/
 
 .box-txt {
-    padding: 15px 24px 0 24px;
-    /*padding-top: 15px;*/
-    /*padding-right: 24px;*/
-    /*padding-bottom: 0px;*/
-    /*padding-left: 24px;*/
+    padding: 5px 10px 0 24px;
 }
 
-/*.tcl:after {*/
-    /*border-right: 20px solid #fffbfa;*/
-    /*border-top: 20px solid transparent;*/
-    /*border-bottom: 20px solid transparent;*/
-    /*content: "";*/
-    /*height: 0;*/
-    /*right: 0;*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*width: 0;*/
-/*}*/
-
-/*.tcl h4 {*/
-    /*color: #fff;*/
-    /*line-height: 40px;*/
-    /*font-size: 22px !important;*/
-/*}*/
