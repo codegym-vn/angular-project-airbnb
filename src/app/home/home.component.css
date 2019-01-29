@@ -76,8 +76,9 @@
 
 .search {
     height: 60px;
-    /*margin-top: 20px;*/
-    background-color: #ffffff;
+    margin-top: 20px;
+    background-color: #ffffff ;
+
 }
 
 .image-hover * {
@@ -231,6 +232,34 @@
     -moz-transition: all 1.2s ease-in-out;
     -ms-transition: all 1.2s ease-in-out;
     -o-transition: all 1.2s ease-in-out;
+}
+
+
+#home-search .booking-category {
+    max-width: 100%;
+    min-height: auto;
+    background: #fff;
+    padding: 10px;
+}
+
+.search-T {
+    border-radius: 4px;
+    background-color: #fffbfa;
+    border: 1px solid #f4511e;
+    /*margin-top: 24px;*/
+    padding: 5px 0;
+}
+
+/*.tcl {*/
+    /*max-width: 283px;*/
+    /*background: #f4511e;*/
+    /*position: relative;*/
+    /*padding: 0 10px;*/
+    /*height: 40px;*/
+/*}*/
+
+.box-txt {
+    padding: 5px 10px 0 24px;
 }
 
 
