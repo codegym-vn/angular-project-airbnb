@@ -1,3 +1,4 @@
+
 <div class="container-fluid col-xs-12 col-lg col-md-6 ">
     <nav class="navbar navbar-light" style="background-color: #ffff;">
         <a [routerLink]="['/']">
@@ -56,11 +57,12 @@
                     </div>
 
                     <div class="col">
-                        <form (ngSubmit)="searchHouse()" [formGroup]="searchForm">
+                        <form (ngSubmit)="searchHouse()" (change)="inputSearch()" [formGroup]="searchForm">
                             <div class="form-row align-items-center">
                                 <div class="col-auto my-1">
                                     <select class="custom-select mr-sm-2"
-                                            name="keyword" formControlName="keyword" [value]="1">
+                                                name="keyword" formControlName="keyword" [value]="0">
+                                        <option value="0">Tìm kiếm theo giá tiền</option>
                                         <option value="1">Từ 5 trăm - 1 triệu</option>
                                         <option value="2">Từ 1 triệu - 1.5 triệu</option>
                                         <option value="3">Từ 1.5 triệu - 2 triệu</option>
@@ -68,7 +70,9 @@
                                     </select>
                                 </div>
                                 <div class="col-auto my-1">
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><span><i
+
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                                            [disabled]="keyword == 0"><span><i
                                             class="fas fa-search"></i></span></button>
                                 </div>
                             </div>
@@ -464,7 +468,7 @@
             <div class="row mt-3">
 
                 <div class="section col-md-4">
-                    <a class="td-header-logo td-sticky-disable" href="https://coinvn247.com/" >
+                    <a class="td-header-logo td-sticky-disable" href="https://coinvn247.com/">
                         <img class="td-retina-data"
 
                              src="https://coinvn247.com/wp-content/uploads/2019/01/123456789.png"
