@@ -4,12 +4,12 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {ViewDetailComponent} from './view-detail/view-detail.component';
-import {OrderComponent} from './order/order.component';
 import {AppRoutingModule} from './app-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CustomerComponent} from './customer/customer.component';
 import {SearchHouseComponent} from './search-house/search-house.component';
 import { RegisterComponent } from './customer/register/register.component';
+import {OrderComponent} from './view-detail/order/order.component';
 
 @NgModule({
     declarations: [
