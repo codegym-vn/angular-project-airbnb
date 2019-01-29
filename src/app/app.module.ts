@@ -10,6 +10,10 @@ import {CustomerComponent} from './customer/customer.component';
 import {SearchHouseComponent} from './search-house/search-house.component';
 import { RegisterComponent } from './customer/register/register.component';
 import {OrderComponent} from './view-detail/order/order.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './customer/login/login.component';
+import { ProfileComponent } from './customer/profile/profile.component';
 
 @NgModule({
     declarations: [
@@ -20,6 +24,10 @@ import {OrderComponent} from './view-detail/order/order.component';
         CustomerComponent,
         SearchHouseComponent,
         RegisterComponent,
+        NavbarComponent,
+        FooterComponent,
+        LoginComponent,
+        ProfileComponent,
     ],
     imports: [
         BrowserModule,
