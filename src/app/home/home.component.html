@@ -1,4 +1,3 @@
-
 <div class="container-fluid col-xs-12 col-lg col-md-6 ">
     <nav class="navbar navbar-light" style="background-color: #ffff;">
         <a [routerLink]="['/']">
@@ -26,37 +25,27 @@
         </div>
     </div>
     <!-- /first section -->
-
-
-    <!--search-->
-    <div class="search sticky-top" style=" margin-top: 10px">
-        <div class="row">
-            <div class="col-md-2 col-sm-4 col-xs-12">
-            </div>
-            <div class="col-md-9 col-sm-4 col-xs-12">
-                <div class="row">
-                    <div class="col">
-                        <div>
+<!--search-->
+    <div class="search-T sticky-top">
+        <div class="tcl" style="margin-top: 10px">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-4">
                             <input type="text" class="form-control" placeholder="Nhập tên thành phố hoặc Homestay">
+
+
+                        </div>
+                        <div class="col-md-4">
+                            <form class="form-row">
+                                <div class="col-md-6 col-sm-6 col-xs-12"><input type="date" class="form-control" id="checkin"></div>
+                                <div class="col-md-6 col-sm-6 col-xs-12"><input type="date" class="form-control" id="checkout"></div>
+                            </form>
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group mb-2">
-                                    <input type="date" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-group mb-2">
-                                    <input type="date" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
+                    <div class="col-md-4">
                         <form (ngSubmit)="searchHouse()" (change)="inputSearch()" [formGroup]="searchForm">
                             <div class="form-row align-items-center">
                                 <div class="col-auto my-1">
@@ -83,11 +72,12 @@
             <div class="col-md-1 col-sm-4 col-xs-12">
             </div>
         </div>
+        <div class="box-txt"><p>
+            <!--#-->
+        </p></div>
     </div>
+    <!--/search-->
 
-    <!--end_search-->
-
-    <!-- /first section -->
     <div class="c" style=" margin-bottom: 50px;">
         <div class="row">
             <div class="col-md-1 col-sm-4 col-xs-12">
@@ -139,6 +129,12 @@
                                             allowfullscreen></iframe>
                                 </div>
                                 <!--end_map-->
+                                <!--&lt;!&ndash;<div class="p-3 mb-2 bg-light text-dark" style="margin-top: 10px">&ndash;&gt;-->
+                                <!--<h4 class="text-center" style="color: red;">Page HomeCodeGym </h4>-->
+
+                                <!--<iframe style="width: 600px; height: 250px; border: 0" src="https://www.facebook.com/plugins/page.php?href= https://www.facebook.com/codegym.vn//&tabs=timeline&width=250&height=331&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"-->
+                                <!--frameborder="0" allowtransparency="true"></iframe>-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
                             </div>
                         </div>
                         <!--end_row1-->
@@ -347,6 +343,7 @@
                 <!--#-->
             </div>
 
+
             <div class="col-md-10 col-sm-4 col-xs-12">
                 <h4 class="text-uppercase font-weight-bold"
                     style="margin-top: 30px; margin-bottom: 30px">Gợi ý từ
@@ -358,6 +355,7 @@
                              src="http://127.0.0.1:8000/storage/{{house.image[0]}}" height="150">
                         <a style="color: black" [routerLink]="['/show', house.id]"><h3>{{house.title}}</h3></a>
                         <div class="price">{{house.price.toLocaleString('vi') + 'VND ngày/đêm'}}</div>
+
 
                         <div *ngIf="house.status === 'Chưa cho thuê';else status">
                             <div class="status"
@@ -430,122 +428,132 @@
     </div>
     <!--end_introduce-->
     <!--end_row-->
-</div>
-<!-- Footer -->
-<div>
-    <footer class="page-footer font-small unique-color-dark" style="margin-top: 20px">
 
-        <div style="background-color: #306d9f;">
-            <div class="container">
 
-                <div class="row d-flex align-items-center">
-                    <!-- Grid column -->
-                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                        <h5 class="mb-0">Theo dõi chúng tôi !</h5>
-                    </div>
-                    <!-- Grid row-->
-                    <div class="d-flex flex-row-reverse" style="margin-top: 5px">
+
+    <!-- Footer -->
+    <div>
+        <footer class="page-footer font-small unique-color-dark" style="margin-top: 20px">
+
+            <div style="background-color: #6351ce;">
+                <div class="container">
+
+
+                    <div class="row d-flex align-items-center">
                         <!-- Grid column -->
-                        <ul class="footerNavLinks">
-                            <a href="https://www.facebook.com/codegym.vn/"><img
-                                    src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-facebook.png"
-                                    alt="Facebook"></a>
-                            <a href="#!"><img
-                                    src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-youtube.png"
-                                    alt="Youtube"></a>
-                            <a href="#!"><img
-                                    src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-telegram.png"
-                                    alt="Telegram"></a>
-                        </ul>
+
+                        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                            <h5 class="mb-0">Theo dõi chúng tôi !</h5>
+                        </div>
+                        <!-- Grid row-->
+                        <div class="d-flex flex-row-reverse" style="margin-top: 5px">
+                            <!-- Grid column -->
+                            <ul class="footerNavLinks">
+                                <a href="#!"><img
+                                        src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-facebook.png"
+                                        alt="Facebook"></a>
+                                <a href="#!"><img
+                                        src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-youtube.png"
+                                        alt="Youtube"></a>
+                                <a href="#!"><img
+                                        src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-telegram.png"
+                                        alt="Telegram"></a>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
+                <!-- Grid column -->
             </div>
-            <!-- Grid column -->
-        </div>
-        <!-- Footer Links -->
-        <div class="container text-center text-md-left mt-5">
-            <!-- Grid row -->
-            <div class="row mt-3">
 
-                <div class="section col-md-4">
-                    <a class="td-header-logo td-sticky-disable" href="https://coinvn247.com/">
-                        <img class="td-retina-data"
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
 
-                             src="https://coinvn247.com/wp-content/uploads/2019/01/123456789.png"
-                             height="150px"
-                             width="225px" alt="">
-                    </a>
-                    <p>Đặt phòng homestay nhanh chóng, trải nghiệm hạng sang tại HomeCodeGym</p>
+
+                    <div class="section col-md-4">
+                        <a class="td-header-logo td-sticky-disable" href="https://coinvn247.com/">
+                            <img class="td-retina-data"
+
+                                 src="https://coinvn247.com/wp-content/uploads/2019/01/123456789.png"
+                                 height="150px"
+                                 width="225px" alt="">
+                        </a>
+                        <p>Đặt phòng homestay nhanh chóng, trải nghiệm hạng sang tại HomeCodeGym</p>
+
+                    </div>
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Hỗ trợ</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <a href="#!">Câu hỏi thường </a>
+                        </p>
+                        <p>
+                            <a href="#!">Chính sách hủy</a>
+                        </p>
+                        <p>
+                            <a href="#!">Hướng dẫn đặt phòng</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Cẩm nang du lịch </h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <a href="#!">Đà Lạt </a>
+                        </p>
+                        <p>
+                            <a href="#!">Đà Nẵng </a>
+                        </p>
+                        <p>
+                            <a href="#!">SaPa </a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <i class="fas fa-home mr-3"></i> CodeGym, My Dinh, Ha Noi </p>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i> codegym@gmail.com</p>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i> + 08 234 567 88</p>
+                        <p>
+                            <i class="fas fa-print mr-3"></i> + 08 234 567 89</p>
+
+                    </div>
+
+                    <!-- Grid column -->
 
                 </div>
-                <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold">Hỗ trợ</h6>
-                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <a href="#!">Câu hỏi thường </a>
-                    </p>
-                    <p>
-                        <a href="#!">Chính sách hủy</a>
-                    </p>
-                    <p>
-                        <a href="#!">Hướng dẫn đặt phòng</a>
-                    </p>
+                <!-- Grid row -->
 
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                    <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold">Cẩm nang du lịch </h6>
-                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <a href="#!">Đà Lạt </a>
-                    </p>
-                    <p>
-                        <a href="#!">Đà Nẵng </a>
-                    </p>
-                    <p>
-                        <a href="#!">SaPa </a>
-                    </p>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-                    <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
-                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <i class="fas fa-home mr-3"></i> CodeGym, My Dinh, Ha Noi </p>
-                    <p>
-                        <i class="fas fa-envelope mr-3"></i> codegym@gmail.com</p>
-                    <p>
-                        <i class="fas fa-phone mr-3"></i> + 08 234 567 88</p>
-                    <p>
-                        <i class="fas fa-print mr-3"></i> + 08 234 567 89</p>
-
-                </div>
-
-                <!-- Grid column -->
 
             </div>
-            <!-- Grid row -->
+            <!-- Footer Links -->
 
-        </div>
-        <!-- Footer Links -->
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                <a href="#!">Bản quyền thuộc về Team CC </a>
+            </div>
+            <!-- Copyright -->
 
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2019 Copyright:
-            <a href="#!">Bản quyền thuộc về Team CC </a>
-        </div>
-        <!-- Copyright -->
-
-    </footer>
+        </footer>
+    </div>
+    <!-- Footer -->
 </div>
-<!-- Footer -->
+
