@@ -25,3 +25,39 @@
     -webkit-border-radius: 120px / 40px;
     border-radius: 90px / 90px;
 }
+#home {
+    background: url(https://znews-photo.zadn.vn/Uploaded/nqgvzn_guhyxg/2017_08_31/COVERArtboard_1_1.jpg) no-repeat center center fixed;
+    display: table;
+    /*height: 700px;*/
+    margin-top: 1px;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.view {
+    margin-top: 600px;
+}
+#services {
+    background-color: #306d9f;
+    color: #ffffff;
+}
+#services .glyphicon {
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 60px;
+    height: 140px;
+    line-height: 140px;
+    text-align: center;
+    vertical-align: middle;
+    width: 140px;
+}
+.search {
+    height: 60px;
+    /*margin-top: 20px;*/
+    background-color: #ffffff ;
+}
