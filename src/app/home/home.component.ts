@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
         this.searchForm = this.formBuilder.group({
             keyword: ''
         });
+        this.keyword = this.searchForm.value.keyword;
     }
 
     getHouses() {
@@ -34,8 +35,11 @@ export class HomeComponent implements OnInit {
     }
 
     searchHouse() {
-        this.keyword = this.searchForm.value.keyword;
         this.router.navigate(['/search', this.keyword]);
+    }
 
+    inputSearch() {
+        this.keyword = this.searchForm.value.keyword;
     }
 }
+
