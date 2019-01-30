@@ -1,288 +1,147 @@
-<!--nav-bar-->
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-1 col-sm-4 col-xs-12">
-            <!--#-->
+<div class="container-fluid col-xs-12 col-lg col-md-6">
+
+
+
+    <!--search-->
+    <div class="sticky-top" style="background-color: #ffff; margin-top: 5px">
+        <nav class="navbar navbar-light" style="background-color: #EFFBFB;">
+            <a class="navbar-brand"></a>
+            <div class="form-group mb-2">
+                <div *ngIf="houses">
+                    <p>Tìm được {{houses.length}} kết quả</p>
+                </div>
+            </div>
+            <form (ngSubmit)="searchHouse()" [formGroup]="searchForm">
+                <div class="form-row align-items-center">
+                    <div class="col-auto my-1">
+                        <select class="custom-select mr-sm-2"
+                                name="keyword" formControlName="keyword" [value]="keyword">
+                            <option>Tìm theo giá tiền</option>
+                            <option value="1">Từ 5 trăm - 1 triệu</option>
+                            <option value="2">Từ 1 triệu - 1.5 triệu</option>
+                            <option value="3">Từ 1.5 triệu - 2 triệu</option>
+                            <option value="4">Từ 2 triệu - 2.5 triệu</option>
+                        </select>
+                    </div>
+                    <div class="col-auto my-1">
+                        <button type="submit" class="btn btn-danger">Tìm kiếm</button>
+                    </div>
+                </div>
+            </form>
+        </nav>
+    </div>
+    <!--end_search-->
+
+
+    <!--row-->
+
+    <!--Q/cao-->
+    <div style="margin-top: 30px;margin-bottom: 30px">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100"
+                         src="https://cdn.luxstay.com/home/event/event_13_1547009294.jpg"
+                         alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                         src="https://cdn.luxstay.com/home/event/event_1_1547106326.jpg"
+                         alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                         src="https://cdn.luxstay.com/home/event/event_13_1547009294.jpg"
+                         alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                         src="https://cdn.luxstay.com/home/event/event_1_1547106326.jpg"
+                         alt="Fourth slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+               data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+               data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <div class="col-md-10 col-sm-4 col-xs-12">
-            <nav class="navbar navbar-light" style="height: 115px">
-                <figure id="logo" class="navbar-brand">
-                    <a [routerLink]="['/']">
-                        <img src="https://coinvn247.com/wp-content/uploads/2019/01/codegym.png" alt="HomeCodeGym"
-                             class="img-responsive" width="160px" height="100px"></a>
-                </figure>
-                <ul class="nav nav-pills">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle btn btn-outline-success" data-toggle="dropdown" href="#"
-                           role="button" aria-haspopup="true" aria-expanded="false">Tài khoản </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Đăng nhập </a>
-                            <a class="dropdown-item" href="#">Đăng ký </a>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            <!--end/nav-bar-->
-
-            <!--search-->
-            <div class="sticky-top" style="background-color: #ffff; margin-top: 5px">
-                <nav class="navbar navbar-light" style="background-color: #EFFBFB;">
-                    <a class="navbar-brand"></a>
-                    <div class="form-group mb-2">
-                        <div *ngIf="houses">
-                            <p>Tìm được {{houses.length}} kết quả</p>
-                        </div>
-                    </div>
-                    <form (ngSubmit)="searchHouse()" [formGroup]="searchForm">
-                        <div class="form-row align-items-center">
-                            <div class="col-auto my-1">
-                                <select class="custom-select mr-sm-2"
-                                        name="keyword" formControlName="keyword" [value]="keyword">
-                                    <option>Tìm theo giá tiền</option>
-                                    <option value="1">Từ 5 trăm - 1 triệu</option>
-                                    <option value="2">Từ 1 triệu - 1.5 triệu</option>
-                                    <option value="3">Từ 1.5 triệu - 2 triệu</option>
-                                    <option value="4">Từ 2 triệu - 2.5 triệu</option>
-                                </select>
-                            </div>
-                            <div class="col-auto my-1">
-                                <button type="submit" class="btn btn-danger">Tìm kiếm</button>
-                            </div>
-                        </div>
-                    </form>
-                </nav>
-            </div>
-            <!--end_search-->
+    </div>
+    <!--end_Q/cao-->
 
 
-            <!--row-->
+    <!--introduce-->
+    <div>
+        <h4 class="text-uppercase font-weight-bold"
+            style="margin-top: 30px; margin-bottom: 30px">Gợi ý từ
+            HomeCodeGym</h4>
+        <div class="row">
+            <div class="col-6 col-md-3 " *ngFor="let house of houses">
 
-            <!--Q/cao-->
-            <div style="margin-top: 30px;margin-bottom: 30px">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100"
-                                 src="https://cdn.luxstay.com/home/event/event_13_1547009294.jpg"
-                                 alt="First slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100"
-                                 src="https://cdn.luxstay.com/home/event/event_1_1547106326.jpg"
-                                 alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100"
-                                 src="https://cdn.luxstay.com/home/event/event_13_1547009294.jpg"
-                                 alt="Third slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100"
-                                 src="https://cdn.luxstay.com/home/event/event_1_1547106326.jpg"
-                                 alt="Fourth slide">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                       data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                       data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                <img style="width: 100%" alt="Điểm đến hàng đầu" class=" lazyloaded shake"
+                     src="http://127.0.0.1:8000/storage/{{house.image[0]}}" height="150">
+                <a style="color: black" [routerLink]="['/show', house.id]"><h3>{{house.title}}</h3></a>
+                <div class="price">{{house.price.toLocaleString('vi') + ' VND ngày/đêm'}}</div>
+
+                <div *ngIf="house.status === 'Chưa cho thuê';else status">
+                    <div class="status"
+                         style="background-color: lightgreen; text-align: center;  margin-bottom: 20px">{{house.status}}</div>
                 </div>
-            </div>
-            <!--end_Q/cao-->
-
-
-            <!--introduce-->
-            <div>
-                <h4 class="text-uppercase font-weight-bold"
-                    style="margin-top: 30px; margin-bottom: 30px">Gợi ý từ
-                    HomeCodeGym</h4>
-                <div class="row">
-                    <div class="col-6 col-md-3 " *ngFor="let house of houses">
-
-                        <img style="width: 100%" alt="Điểm đến hàng đầu" class=" lazyloaded shake"
-                             src="http://127.0.0.1:8000/storage/{{house.image[0]}}" height="150">
-                        <a style="color: black" [routerLink]="['/show', house.id]"><h3>{{house.title}}</h3></a>
-                        <div class="price">{{house.price.toLocaleString('vi') + ' VND ngày/đêm'}}</div>
-
-                        <div *ngIf="house.status === 'Chưa cho thuê';else status">
-                            <div class="status"
-                                 style="background-color: lightgreen; text-align: center;  margin-bottom: 20px">{{house.status}}</div>
-                        </div>
-                        <ng-template #status>
-                            <div class="status"
-                                 style="background-color: chartreuse; text-align: center;  margin-bottom: 20px">{{house.status}}</div>
-                        </ng-template>
-                    </div>
-                </div>
-            </div>
-
-
-            <!--end_introduce-->
-
-            <!--introduce-->
-            <div>
-                <div class="row">
-                    <div class="col-4 col-sm-4 col-xs-12">
-                        <div class="advantages-thumb"><img class=" lazyloaded"
-                                                           data-src="https://cdn.luxstay.com/home/talk/talk_11072018100744.png"
-                                                           src="https://cdn.luxstay.com/home/talk/talk_11072018100744.png">
-                        </div>
-                        <div class="advantages-txt"><h3>Lần đầu tiên tại Việt Nam</h3>
-                            <p>Ứng dụng cho thuê chỗ ở chuyên nghiệp, đặt phòng tin cậy cho HomeCodeGym cao cấp, căn
-                                hộ dịch vụ và biệt thự nghỉ dưỡng.</p></div>
-
-                    </div>
-                    <div class="col-4 col-sm-4 col-xs-12">
-                        <div class="advantages-thumb"><img class=" lazyloaded"
-                                                           data-src="https://cdn.luxstay.com/home/talk/talk_5_1543569870.png"
-                                                           src="https://cdn.luxstay.com/home/talk/talk_5_1543569870.png">
-                        </div>
-                        <div class="advantages-txt"><h3>Sống như người bản địa</h3>
-                            <p>Trải nghiệm không gian bản địa để chuyến du lịch có nhiều màu sắc. Chúng tôi mang
-                                đến
-                                những trải
-                                nghiệm hoàn toàn mới nhưng vẫn đảm bảo sự tiện lợi và riêng tư tuyệt đối.</p>
-                        </div>
-
-                    </div>
-                    <div class="col-4 col-sm-4 col-xs-12">
-                        <div class="advantages-thumb"><img class=" lazyloaded"
-                                                           data-src="https://cdn.luxstay.com/home/talk/talk_11072018100842.png"
-                                                           src="https://cdn.luxstay.com/home/talk/talk_11072018100842.png">
-                        </div>
-                        <div class="advantages-txt"><h3>Mỗi căn hộ một cá tính riêng</h3>
-                            <p>Từ những căn hộ hiện đại, biệt thự biệt lập cho đến những ngôi nhà truyền thống,
-                                chúng tôi không
-                                ngừng mở rộng danh sách để đem đến sự lựa chọn đa dạng cho khách hàng.</p></div>
-
-                    </div>
-                </div>
+                <ng-template #status>
+                    <div class="status"
+                         style="background-color: chartreuse; text-align: center;  margin-bottom: 20px">{{house.status}}</div>
+                </ng-template>
             </div>
         </div>
-        <div class="col-md-1 col-sm-4 col-xs-12">
-            <!--#-->
+    </div>
+
+
+    <!--end_introduce-->
+
+    <!--introduce-->
+    <div>
+        <div class="row">
+            <div class="col-4 col-sm-4 col-xs-12">
+                <div class="advantages-thumb"><img class=" lazyloaded"
+                                                   data-src="https://cdn.luxstay.com/home/talk/talk_11072018100744.png"
+                                                   src="https://cdn.luxstay.com/home/talk/talk_11072018100744.png">
+                </div>
+                <div class="advantages-txt"><h3>Lần đầu tiên tại Việt Nam</h3>
+                    <p>Ứng dụng cho thuê chỗ ở chuyên nghiệp, đặt phòng tin cậy cho HomeCodeGym cao cấp, căn
+                        hộ dịch vụ và biệt thự nghỉ dưỡng.</p></div>
+
+            </div>
+            <div class="col-4 col-sm-4 col-xs-12">
+                <div class="advantages-thumb"><img class=" lazyloaded"
+                                                   data-src="https://cdn.luxstay.com/home/talk/talk_5_1543569870.png"
+                                                   src="https://cdn.luxstay.com/home/talk/talk_5_1543569870.png">
+                </div>
+                <div class="advantages-txt"><h3>Sống như người bản địa</h3>
+                    <p>Trải nghiệm không gian bản địa để chuyến du lịch có nhiều màu sắc. Chúng tôi mang
+                        đến
+                        những trải
+                        nghiệm hoàn toàn mới nhưng vẫn đảm bảo sự tiện lợi và riêng tư tuyệt đối.</p>
+                </div>
+
+            </div>
+            <div class="col-4 col-sm-4 col-xs-12">
+                <div class="advantages-thumb"><img class=" lazyloaded"
+                                                   data-src="https://cdn.luxstay.com/home/talk/talk_11072018100842.png"
+                                                   src="https://cdn.luxstay.com/home/talk/talk_11072018100842.png">
+                </div>
+                <div class="advantages-txt"><h3>Mỗi căn hộ một cá tính riêng</h3>
+                    <p>Từ những căn hộ hiện đại, biệt thự biệt lập cho đến những ngôi nhà truyền thống,
+                        chúng tôi không
+                        ngừng mở rộng danh sách để đem đến sự lựa chọn đa dạng cho khách hàng.</p></div>
+
+            </div>
         </div>
     </div>
 </div>
 <!--end_introduce-->
 <!--end_row-->
-<!-- Footer -->
-<footer class="page-footer font-small unique-color-dark" style="margin-top: 20px">
-
-    <div style="background-color: #6351ce;">
-        <div class="container">
-
-            <div class="row d-flex align-items-center">
-                <!-- Grid column -->
-                <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                    <h5 class="mb-0">Theo dõi chúng tôi !</h5>
-                </div>
-                <!-- Grid row-->
-                <div class="d-flex flex-row-reverse" style="margin-top: 5px">
-                    <!-- Grid column -->
-                    <ul class="footerNavLinks">
-                        <a href="#!"><img
-                                src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-facebook.png"
-                                alt="Facebook"></a>
-                        <a href="#!"><img
-                                src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-youtube.png"
-                                alt="Youtube"></a>
-                        <a href="#!"><img
-                                src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-telegram.png"
-                                alt="Telegram"></a>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- Grid column -->
-    </div>
-    <!-- Footer Links -->
-    <div class="container text-center text-md-left mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-
-            <div class="section col-md-4">
-                <a class="td-header-logo td-sticky-disable" href="https://coinvn247.com/">
-                    <img class="td-retina-data"
-
-                         src="https://coinvn247.com/wp-content/uploads/2019/01/homecodegum.png"
-                         height="150px"
-                         width="265px" alt="">
-                </a>
-            </div>
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Hỗ trợ</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
-                    <a href="#!">Câu hỏi thường </a>
-                </p>
-                <p>
-                    <a href="#!">Chính sách hủy</a>
-                </p>
-                <p>
-                    <a href="#!">Hướng dẫn đặt phòng</a>
-                </p>
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Cẩm nang du lịch </h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
-                    <a href="#!">Đà Lạt </a>
-                </p>
-                <p>
-                    <a href="#!">Đà Nẵng </a>
-                </p>
-                <p>
-                    <a href="#!">SaPa </a>
-                </p>
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-                <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Contact</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
-                    <i class="fas fa-home mr-3"></i> CodeGym, My Dinh, Ha Noi </p>
-                <p>
-                    <i class="fas fa-envelope mr-3"></i> codegym@gmail.com</p>
-                <p>
-                    <i class="fas fa-phone mr-3"></i> + 08 234 567 88</p>
-                <p>
-                    <i class="fas fa-print mr-3"></i> + 08 234 567 89</p>
-
-            </div>
-
-            <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-    </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2019 Copyright:
-        <a href="#!">Bản quyền thuộc về Team CC </a>
-    </div>
-    <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
