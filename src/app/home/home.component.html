@@ -11,15 +11,13 @@
 <div class="search-T sticky-top">
     <div class="tcl" style="margin-top: 10px">
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+            <div class="col-md-2 col-sm-4 col-xs-12"></div>
+            <div class="col-md-8 col-sm-4 col-xs-12">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
                         <input type="text" class="form-control" placeholder="Nhập tên thành phố hoặc Homestay">
-
-
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
                         <form class="form-row">
                             <div class="col-md-6 col-sm-6 col-xs-12"><input type="date" class="form-control"
                                                                             id="checkin"></div>
@@ -27,29 +25,29 @@
                                                                             id="checkout"></div>
                         </form>
                     </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <form (ngSubmit)="searchHouse()" (change)="inputSearch()" [formGroup]="searchForm">
+                            <div class="form-row align-items-center">
+                                <div class="col-auto my-1">
+                                    <select class="custom-select mr-sm-2"
+                                            name="keyword" formControlName="keyword" [value]="0">
+                                        <option value="0">Tìm kiếm theo giá tiền</option>
+                                        <option value="1">Từ 5 trăm - 1 triệu</option>
+                                        <option value="2">Từ 1 triệu - 1.5 triệu</option>
+                                        <option value="3">Từ 1.5 triệu - 2 triệu</option>
+                                        <option value="4">Từ 2 triệu - 2.5 triệu</option>
+                                    </select>
+                                </div>
+                                <div class="col-auto my-1">
+                                    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"
+                                            [disabled]="keyword == 0">Tìm kiếm
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
-                <div class="col-md-4">
-                    <form (ngSubmit)="searchHouse()" (change)="inputSearch()" [formGroup]="searchForm">
-                        <div class="form-row align-items-center">
-                            <div class="col-auto my-1">
-                                <select class="custom-select mr-sm-2"
-                                        name="keyword" formControlName="keyword" [value]="0">
-                                    <option value="0">Tìm kiếm theo giá tiền</option>
-                                    <option value="1">Từ 5 trăm - 1 triệu</option>
-                                    <option value="2">Từ 1 triệu - 1.5 triệu</option>
-                                    <option value="3">Từ 1.5 triệu - 2 triệu</option>
-                                    <option value="4">Từ 2 triệu - 2.5 triệu</option>
-                                </select>
-                            </div>
-                            <div class="col-auto my-1">
-                                <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"
-                                        [disabled]="keyword == 0">Tìm kiếm
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
         <div class="col-md-1 col-sm-4 col-xs-12">
