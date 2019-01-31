@@ -28,7 +28,7 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <form (ngSubmit)="searchHouse()" (change)="inputSearch()" [formGroup]="searchForm">
                             <div class="form-row align-items-center">
-                                <div class="col-auto my-1">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <select class="custom-select mr-sm-2"
                                             name="keyword" formControlName="keyword" [value]="0">
                                         <option value="0">Tìm kiếm theo giá tiền</option>
@@ -38,7 +38,7 @@
                                         <option value="4">Từ 2 triệu - 2.5 triệu</option>
                                     </select>
                                 </div>
-                                <div class="col-auto my-1">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"
                                             [disabled]="keyword == 0">Tìm kiếm
                                     </button>
@@ -100,17 +100,7 @@
                                 </div>
 
                             </div>
-                            <!--map-->
-                            <!--<div class="p-3 mb-2 bg-light text-dark" style="margin-top: 10px">-->
-                                <!--<h4 style="color: red">Địa chỉ HomeCodeGym </h4>-->
 
-
-                                <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9265632499687!2d105.76612145093053!3d21.035624192850133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b9444c676b%3A0xe713200541b7456d!2sCodeGym!5e0!3m2!1svi!2s!4v1547885473894"-->
-                                        <!--frameborder="0" style="border:0"-->
-                                        <!--allowfullscreen></iframe>-->
-
-                            <!--</div>-->
-                            <!--end_map-->
                             <div class="fb p-3 mb-2 bg-light text-dark" style="margin-top: 10px">
                                 <div class="row">
                                     <div class="col-1"></div>
