@@ -1,0 +1,107 @@
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Đặt nhà</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Tên</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại</label>
+                        <input type="number" class="form-control" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Địa chỉ</label>
+                        <input type="text" class="form-control" id="address">
+                    </div>
+                    <div class="form-group">
+                        <label for="checkIn">Ngày đến</label>
+                        <input type="date" class="form-control" id="checkIn" [value]="orderForm.value.checkIn">
+                    </div>
+                    <div class="form-group">
+                        <label for="checkOut">Ngày đi</label>
+                        <input type="date" class="form-control" id="checkOut" value="{{orderForm.value.checkOut}}">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Đặt phòng</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">-->
+    <!--Launch demo modal-->
+<!--</button>-->
+
+<div class="card sticky-top">
+    <div class="card-header">
+        {{house_price?.toLocaleString() + 'VND ngày/đêm'}}
+    </div>
+    <div class="container">
+        <form (ngSubmit)="onSubmit()" (change)="getTotalPrice()" [formGroup]="orderForm">
+            <div class="form-group">
+                <div class="form-row" style="margin-top: 15px">
+                    <div class="form-group col-md-6">
+                        <label>NGÀY ĐẾN </label>
+                        <input type="date" class="form-control" name="checkIn"
+                               formControlName="checkIn">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>NGÀY ĐI </label>
+                        <input type="date" class="form-control" name="checkOut"
+                               formControlName="checkOut">
+                    </div>
+                </div>
+                <input type="hidden" name="house_id" formControlName="house_id">
+            </div>
+            <div *ngIf="date; else total_price">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        Tổng: {{(date * house_price).toLocaleString('vi')}} VND
+                    </li>
+                </ul>
+            </div>
+            <ng-template #total_price>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        Tổng: 0 VND
+                    </li>
+                </ul>
+            </ng-template>
+            <div *ngIf="message">
+                <p style="background-color: aquamarine">{{message}}</p>
+            </div>
+            <div class="text-center" style="margin-top: 20px; margin-bottom: 20px">
+                <button type="button" [disabled]="!date" class="btn btn-danger" data-toggle="modal"
+                        data-target="#exampleModal" style="background: #f4511e">Gửi yêu cầu đặt phòng
+                </button>
+            </div>
+
+
+            <p class="m-0"><i class="iconroom-phone-line" aria-hidden="true"></i> Gọi <a
+                    href="tel:0983692323"><b>0983692323</b></a>
+                để được hỗ trợ 24/7 </p>
+            <p style="margin-top: 20px"><i class="iconroom-shape" aria-hidden="true"></i> Nhắn tin
+                <a
+                        target="_blank"
+                        href="https://www.facebook.com/messages/t/2415471875161293"><b>HomeCodeGym</b></a>
+                để được hỗ trợ 24/7 </p>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,106 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a [routerLink]="['/']">
+        <img src="https://coinvn247.com/wp-content/uploads/2019/01/codegym.png" alt="HomeCodeGym"
+             class="img-responsive" width="120px" height="70px" style="margin-left: 130px"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <ul class="nav nav-pills">
+            <li style="margin-right: 5px">
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#registerModal">
+                    Đăng
+                    ký
+                </button>
+
+            </li>
+            <li>
+                <button type="button" class="btn btn-danger" data-toggle="modal"
+                        data-target="#loginModal">Đăng nhập
+                </button>
+
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--Register-->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="p-t-10 p-b-10 col-md-12" style="text-align: center;color: #555">
+                    <img src="https://coinvn247.com/wp-content/uploads/2019/01/codegym.png" alt="HomeCodeGym"
+                         class="img-responsive" width="120px" height="70px">
+                    <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="emailReg">Email</label>
+                        <input type="email" class="form-control" id="emailReg">
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordReg">Mật khẩu</label>
+                        <input type="password" class="form-control" id="passwordReg">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPasswordReg">Xác nhận mật khẩu</label>
+                        <input type="password" class="form-control" id="confirmPasswordReg">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Đăng ký</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Login-->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="p-t-10 p-b-10 col-md-12" style="text-align: center;color: #555">
+                    <img src="https://coinvn247.com/wp-content/uploads/2019/01/codegym.png" alt="HomeCodeGym"
+                         class="img-responsive" width="120px" height="70px">
+                    <h3>ĐĂNG NHẬP TÀI KHOẢN</h3>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="emailLog">Email</label>
+                        <input type="email" class="form-control" id="emailLog">
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordLog">Mật khẩu</label>
+                        <input type="password" class="form-control" id="passwordLog">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Đăng nhập </button>
+                    </div>
+                    <div class="w-full text-center" style="margin-top: 5px">
+                        <a href="" data-toggle="#"
+                           data-target="#" style="color: red">
+                            Quên mật khẩu ?
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

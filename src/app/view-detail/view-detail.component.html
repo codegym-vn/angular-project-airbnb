@@ -1,0 +1,113 @@
+<div class="container-fluid col-xs-12 col-lg col-md-6 ">
+    <div class="row">
+        <div class="col col-sm-4 col-xs-12 hover01">
+            <figure><img class="body" src="http://127.0.0.1:8000/storage/{{house?.image[0]}}"
+                         width="100%" height="280px"></figure>
+
+        </div>
+        <div class="col col-sm-4 col-xs-12 hover01">
+            <figure><img class="card-img-top"
+                 src="http://127.0.0.1:8000/storage/{{house?.image[1]}}"
+                         alt="Card image cap" height="280px" width="100%"></figure>
+        </div>
+        <div class="col col-sm-4 col-xs-12 hover01">
+            <figure><img class="card-img-top"
+                 src="http://127.0.0.1:8000/storage/{{house?.image[2]}}"
+                         alt="Card image cap" height="280px" width="100%"></figure>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-1 col-sm-4 col-xs-12">
+            <!--#-->
+        </div>
+        <div class="col-md-10 col-sm-4 col-xs-12">
+            <div class="row">
+                <div class="col-md-9 col-sm-6 col-xs-12">
+                    <!--profile-->
+                    <div>
+                        <h3 class="title"
+                            style="text-align: center;margin-top: 20px; font-size: 38px">{{house?.title}}</h3>
+
+                        <!--<div class="col-6">-->
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <h4>Giá</h4>
+                                <p style="color: #f4511e">
+                                    {{house?.price.toLocaleString('vi') + 'VND ngày/đêm'}}
+                                </p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <h4>Trạng thái</h4>
+                                <p>
+                                    {{house?.status}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <h4>Số lượng phòng ngủ</h4>
+                                <p>
+                                    {{house?.quantityOfBedroom + ' phòng'}}
+                                </p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <h4>Số lượng phòng tắm</h4>
+                                <p>
+                                    {{house?.quantityOfBathroom + ' phòng'}}
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Địa chỉ</h4>
+                            <p>
+                                {{house?.address}}
+                            </p>
+                        </div>
+
+                        <div class="box-Highlights" style="margin-bottom: 20px">
+                            <div class="tlt"><h4>Điểm nổi bật của chỗ ở</h4></div>
+                            <div class="box-txt"><p>{{house?.description}}</p></div>
+                        </div>
+
+                    </div>
+
+                    <!--end_profile-->
+                    <h3> Chi tiết khác </h3>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">Nhận phòng</th>
+                            <th scope="col">2:00</th>
+
+                        </tr>
+                        </thead>
+                        <thead>
+                        <tr>
+                            <th scope="col">Trả phòng</th>
+                            <th scope="col">12:00</th>
+
+                        </tr>
+                        </thead>
+                        <thead>
+                        <tr>
+                            <p>Nếu quý khách có nhu cầu về giờ nhận và trả phòng khác với quy định chung của HomeCodeGym,
+                                quý khách vui lòng liên hệ số điện thoại 0983692323 (miễn phí) để được hỗ trợ tốt
+                                nhất</p>
+
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12" style="margin-top: 20px">
+                    <app-order [house_id]="house?.id" [house_price]="house?.price"></app-order>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-4 col-xs-12">
+            <!--#-->
+        </div>
+    </div>
+</div>
+
+
